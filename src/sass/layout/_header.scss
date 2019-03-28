@@ -1,0 +1,58 @@
+.hd-Header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  color: #fff;
+}
+
+.hd-Header_Inner {
+  @include inner;
+}
+
+.hd-Header_Body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.hd-Header_Block {
+  display: flex;
+}
+
+.hd-Header_Nav {
+  width: 100%;
+  display: flex;
+}
+
+.hd-Header_Items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  .hd-Header_Nav & {
+    justify-content: flex-end;
+  }
+}
+
+.hd-Header_Item {
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.hd-Social_Icon {
+  width: 24px;
+  fill: #fff;
+}
+
+.hd-Header_Link {
+  text-decoration: none;
+  color: #fff;
+}

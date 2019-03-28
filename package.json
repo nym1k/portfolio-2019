@@ -1,0 +1,25 @@
+{
+  "name": "portfolio-2019",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "preview": "browser-sync start --server --files '**/*'",
+    "clean": "rimraf dist",
+    "compile": "node-sass --output-style=expanded --source-map=true src/sass/styles.scss dist/css/styles.css",
+    "prefix": "postcss dist/css/styles.css --use=autoprefixer --map=false --output=dist/css/styles.css",
+    "minify": "cleancss --level=1 --source-map --source-map-inline-sources --output dist/css/styles.min.css dist/css/styles.css",
+    "dev": "npm run compile -- --watch",
+    "build": "npm run clean && npm run compile && npm run prefix && npm run minify"
+  },
+  "browserslist": ["last 2 versions"],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.5.0",
+    "clean-css-cli": "^4.2.1",
+    "node-sass": "^4.11.0",
+    "postcss-cli": "^6.1.2"
+  }
+}

@@ -1,0 +1,26 @@
+.abt-About_Columns {
+  display: flex;
+  align-items: center;
+}
+
+.abt-About_Column {
+  flex: 1;
+}
+
+.abt-About_Column-large {
+  flex: 2;
+}
+
+.abt-About_Image {
+  border-radius: 50%;
+}
+
+.abt-About_Title {
+  @include Font_30-36;
+  margin-bottom: 20px;
+}
+
+.abt-About_Text {
+  @include Font_16-24;
+  letter-spacing: 1px;
+}

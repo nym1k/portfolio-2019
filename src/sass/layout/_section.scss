@@ -1,0 +1,7 @@
+.sec-Section {
+  @include spacer;
+}
+
+.sec-Section_Inner {
+  @include grid_container;
+}

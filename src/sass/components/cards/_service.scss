@@ -1,0 +1,18 @@
+.crd-Service_Card {
+  text-align: center;
+}
+
+.crd-Service_Icon {
+  
+}
+
+.crd-Service_Title {
+  @include Font_30-36;
+  letter-spacing: 0.6px;
+  margin-bottom: 20px;
+}
+
+.crd-Service_Text {
+  @include Font_16-24;
+  letter-spacing: 1px;
+}

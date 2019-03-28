@@ -1,0 +1,179 @@
+@font-face {
+  font-family: 'Calluna-Regular';
+  src: url("../fonts/Calluna-Regular-webfont.woff2") format("woff2"), url("../fonts/Calluna-Regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Calluna-Regular';
+}
+
+li {
+  list-style: none;
+}
+
+.abt-About_Columns {
+  display: flex;
+  align-items: center;
+}
+
+.abt-About_Column {
+  flex: 1;
+}
+
+.abt-About_Column-large {
+  flex: 2;
+}
+
+.abt-About_Image {
+  border-radius: 50%;
+}
+
+.abt-About_Title {
+  font-size: 30px;
+  line-height: 36px;
+  margin-bottom: 20px;
+}
+
+.abt-About_Text {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 1px;
+}
+
+.her-Hero {
+  background: blue;
+}
+
+.her-Hero_Inner {
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+.her-Hero_Body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.her-Hero_Title {
+  font-size: 50px;
+  line-height: 60px;
+  color: #fff;
+  margin-left: calc((1 / 12) * 100%);
+}
+
+.srv-Service_Items {
+  display: flex;
+}
+
+.srv-Service_Item {
+  flex: 1;
+  margin-right: 40px;
+}
+
+.srv-Service_Item:last-child {
+  margin-right: 0;
+}
+
+.crd-Service_Card {
+  text-align: center;
+}
+
+.crd-Service_Title {
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: 0.6px;
+  margin-bottom: 20px;
+}
+
+.crd-Service_Text {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 1px;
+}
+
+.hd-Header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  color: #fff;
+}
+
+.hd-Header_Inner {
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+.hd-Header_Body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.hd-Header_Block {
+  display: flex;
+}
+
+.hd-Header_Nav {
+  width: 100%;
+  display: flex;
+}
+
+.hd-Header_Items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.hd-Header_Nav .hd-Header_Items {
+  justify-content: flex-end;
+}
+
+.hd-Header_Item {
+  margin-right: 20px;
+}
+
+.hd-Header_Item:last-child {
+  margin-right: 0;
+}
+
+.hd-Social_Icon {
+  width: 24px;
+  fill: #fff;
+}
+
+.hd-Header_Link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.sec-Section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.sec-Section_Inner {
+  padding-right: 40px;
+  padding-left: 40px;
+  max-width: 1580px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,23 @@
+.her-Hero {
+  background: blue;
+}
+
+.her-Hero_Inner {
+  @include inner;
+}
+
+.her-Hero_Body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.her-Hero_Content {
+}
+
+.her-Hero_Title {
+  @include Font_50-60;
+  color: #fff;
+  margin-left: calc((1 / 12) * 100%);
+}

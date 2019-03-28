@@ -1,0 +1,12 @@
+.srv-Service_Items {
+  display: flex;
+}
+
+.srv-Service_Item {
+  flex: 1;
+  margin-right: $grid-gap;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
