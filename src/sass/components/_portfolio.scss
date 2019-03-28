@@ -1,0 +1,13 @@
+.prt-Portfolio_Items {
+  display: flex;
+}
+
+.prt-Portfolio_Item {
+  flex: 1;
+
+  margin-right: $grid-gap;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

@@ -16,6 +16,10 @@ body {
   font-family: 'Calluna-Regular';
 }
 
+img {
+  max-width: 100%;
+}
+
 li {
   list-style: none;
 }
@@ -70,6 +74,19 @@ li {
   line-height: 60px;
   color: #fff;
   margin-left: calc((1 / 12) * 100%);
+}
+
+.prt-Portfolio_Items {
+  display: flex;
+}
+
+.prt-Portfolio_Item {
+  flex: 1;
+  margin-right: 40px;
+}
+
+.prt-Portfolio_Item:last-child {
+  margin-right: 0;
 }
 
 .srv-Service_Items {
