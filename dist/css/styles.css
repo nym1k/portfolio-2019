@@ -24,6 +24,21 @@ li {
   list-style: none;
 }
 
+.frm-Form_Input {
+  display: block;
+  width: 100%;
+}
+
+.frm-Form_Textarea {
+  display: block;
+  width: 100%;
+}
+
+.frm-Form_Submit {
+  display: block;
+  width: 100%;
+}
+
 .her-Hero {
   background: blue;
 }
@@ -151,8 +166,8 @@ li {
 }
 
 .sec-Section {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .sec-Section_Inner {
@@ -177,7 +192,7 @@ li {
   flex: 2;
 }
 
-.sec-Section_Image {
+.sec-Section_Image-round {
   border-radius: 50%;
 }
 
