@@ -14,6 +14,7 @@
 
 body {
   font-family: 'Calluna-Regular';
+  background-color: #f6f6f6;
 }
 
 img {
@@ -168,6 +169,8 @@ li {
 .ft-Footer {
   padding-top: 40px;
   padding-bottom: 40px;
+  background-color: #3b3a36;
+  color: #f6f6f6;
 }
 
 .ft-Footer_Inner {
@@ -183,6 +186,11 @@ li {
 .sec-Section {
   padding-top: 80px;
   padding-bottom: 80px;
+}
+
+.sec-Section-dark {
+  background-color: #3b3a36;
+  color: #fff;
 }
 
 .sec-Section_Inner {
@@ -221,6 +229,11 @@ li {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.sec-Section_Text:only-child {
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

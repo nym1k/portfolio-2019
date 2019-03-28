@@ -2,6 +2,11 @@
   @include spacer;
 }
 
+.sec-Section-dark {
+  background-color: $color-dark;
+  color: #fff;
+}
+
 .sec-Section_Inner {
   @include grid_container;
 }
@@ -31,4 +36,9 @@
 .sec-Section_Text {
   @include Font_16-24;
   letter-spacing: 1px;
+  margin-bottom: 10px;
+
+  &:only-child {
+    margin-bottom: 0;
+  }
 }
