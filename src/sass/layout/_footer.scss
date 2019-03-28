@@ -1,0 +1,13 @@
+.ft-Footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.ft-Footer_Inner {
+  @include inner;
+}
+
+.ft-Footer_Body {
+  display: flex;
+  justify-content: center;
+}
