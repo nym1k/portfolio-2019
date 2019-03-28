@@ -24,35 +24,6 @@ li {
   list-style: none;
 }
 
-.abt-About_Columns {
-  display: flex;
-  align-items: center;
-}
-
-.abt-About_Column {
-  flex: 1;
-}
-
-.abt-About_Column-large {
-  flex: 2;
-}
-
-.abt-About_Image {
-  border-radius: 50%;
-}
-
-.abt-About_Title {
-  font-size: 30px;
-  line-height: 36px;
-  margin-bottom: 20px;
-}
-
-.abt-About_Text {
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 1px;
-}
-
 .her-Hero {
   background: blue;
 }
@@ -191,6 +162,35 @@ li {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
+}
+
+.sec-Section_Columns {
+  display: flex;
+  align-items: center;
+}
+
+.sec-Section_Column {
+  flex: 1;
+}
+
+.sec-Section_Column-large {
+  flex: 2;
+}
+
+.sec-Section_Image {
+  border-radius: 50%;
+}
+
+.sec-Section_Title {
+  font-size: 30px;
+  line-height: 36px;
+  margin-bottom: 20px;
+}
+
+.sec-Section_Text {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 1px;
 }
 
 /*# sourceMappingURL=styles.css.map */

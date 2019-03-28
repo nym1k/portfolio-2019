@@ -5,3 +5,30 @@
 .sec-Section_Inner {
   @include grid_container;
 }
+
+.sec-Section_Columns {
+  display: flex;
+  align-items: center;
+}
+
+.sec-Section_Column {
+  flex: 1;
+}
+
+.sec-Section_Column-large {
+  flex: 2;
+}
+
+.sec-Section_Image-round {
+  border-radius: 50%;
+}
+
+.sec-Section_Title {
+  @include Font_30-36;
+  margin-bottom: 20px;
+}
+
+.sec-Section_Text {
+  @include Font_16-24;
+  letter-spacing: 1px;
+}
