@@ -1,13 +1,13 @@
 @font-face {
   font-family: 'Calluna-Regular';
-  src: url("../fonts/Calluna-Regular-webfont.woff2") format("woff2"), url("../fonts/Calluna-Regular-webfont.woff") format("woff");
+  src: url("../portfolio-2019/fonts/Calluna-Regular-webfont.woff2") format("woff2"), url("../portfolio-2019/fonts/Calluna-Regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'CallunaSans-Regular';
-  src: url("../fonts/CallunaSans-Regular-webfont.woff2") format("woff2"), url("../fonts/CallunaSans-Regular-webfont.woff") format("woff");
+  src: url("../portfolio-2019/fonts/CallunaSans-Regular-webfont.woff2") format("woff2"), url("../portfolio-2019/fonts/CallunaSans-Regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
