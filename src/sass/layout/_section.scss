@@ -11,6 +11,11 @@
   @include grid_container;
 }
 
+.sec-Section_Header {
+  padding-bottom: $grid-gap;
+  text-align: center;
+}
+
 .sec-Section_Columns {
   display: flex;
   width: 100%;

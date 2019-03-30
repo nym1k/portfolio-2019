@@ -22,6 +22,12 @@
 body {
   font-family: "Calluna-Regular";
   background-color: #f6f6f6;
+  font-size: 16px;
+}
+
+a, a:hover, a:focus, a:visited, a:active {
+  color: inherit;
+  text-decoration: none;
 }
 
 img {
@@ -32,6 +38,25 @@ li {
   list-style: none;
 }
 
+body, button, input, select, textarea {
+  text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+button, input, select, textarea {
+  font-size: inherit;
+  font-family: inherit;
+  background-color: transparent;
+}
+
+input::placeholder, textarea::placeholder {
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
+
 .frm-Form {
   display: flex;
   flex-wrap: wrap;
@@ -39,22 +64,31 @@ li {
 
 .frm-Form_Input,
 .frm-Form_Textarea {
+  font-size: 14px;
+  line-height: 20px;
   display: block;
   width: 100%;
-  margin-bottom: 15px;
-  padding: 10px;
+  margin-bottom: 20px;
+  padding: 10px 15px;
   appearance: none;
   outline: none;
   border-radius: 3px;
   font-family: "Calluna-Regular";
+  background-color: #f6f6f6;
+  color: #3b3a36;
 }
 
 .frm-Form_Input {
-  width: calc(50% - 7.5px);
+  height: 40px;
+  width: calc(50% - 10px);
+}
+
+.frm-Form_Input::placeholder {
+  line-height: 20px;
 }
 
 .frm-Form_Input:first-child {
-  margin-right: 15px;
+  margin-right: 20px;
 }
 
 .frm-Form_Textarea {
@@ -62,12 +96,16 @@ li {
 }
 
 .frm-Form_Submit {
+  font-size: 16px;
+  line-height: 24px;
   font-family: "Calluna-Regular";
   font-weight: 500;
   display: inline-block;
   padding: 10px 20px;
   text-align: center;
   border-radius: 3px;
+  background-color: #e05038;
+  color: #f6f6f6;
   display: inline-block;
   width: 100%;
 }
@@ -86,6 +124,8 @@ li {
   right: 0;
   z-index: 1;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .her-Hero_Inner {
@@ -109,7 +149,7 @@ li {
   font-weight: 500;
   letter-spacing: 0.6px;
   color: #fff;
-  margin-left: calc((2 / 12) * 100%);
+  margin-left: calc((1 / 12) * 100%);
 }
 
 .prt-Portfolio_Items {
@@ -143,7 +183,7 @@ li {
 }
 
 .crd-Service_Icon {
-  fill: #f6f6f6;
+  fill: #3b3a36;
   max-width: 100px;
   margin: 0 auto 30px;
 }
@@ -155,6 +195,7 @@ li {
   font-weight: 500;
   letter-spacing: 0.6px;
   margin-bottom: 20px;
+  color: #e05038;
 }
 
 .crd-Service_Text {
@@ -234,8 +275,7 @@ li {
 }
 
 .ft-Footer {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 80px;
   background-color: #3b3a36;
   color: #f6f6f6;
 }
@@ -256,17 +296,19 @@ li {
 }
 
 .ft-Footer_Footer {
-  padding-top: 40px;
+  padding-top: 80px;
+  padding-bottom: 40px;
   text-align: center;
 }
 
 .ft-Footer_Columns {
   display: flex;
+  justify-content: space-between;
   width: 100%;
 }
 
 .ft-Footer_Column {
-  flex: 1;
+  flex: 0 0 calc(50% - 20px);
 }
 
 .ft-Footer_Title {
@@ -289,11 +331,38 @@ li {
   margin-bottom: 0;
 }
 
+.ft-Footer_Links {
+  margin-top: 30px;
+}
+
+.ft-Footer_Link {
+  font-size: 16px;
+  line-height: 24px;
+  color: #f6f6f6;
+  display: block;
+  letter-spacing: 1px;
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 35px;
+}
+
 .ft-Footer_Icon {
   width: 100%;
   display: inline-block;
-  max-width: 10px;
-  fill: #f6f6f6;
+  fill: #e05038;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.ft-Footer_Icon-phone {
+  width: 13px;
+  margin-left: 2px;
+}
+
+.ft-Footer_Icon-email {
+  width: 18px;
 }
 
 .sec-Section {
@@ -313,6 +382,11 @@ li {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
+}
+
+.sec-Section_Header {
+  padding-bottom: 40px;
+  text-align: center;
 }
 
 .sec-Section_Columns {

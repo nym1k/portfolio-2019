@@ -3,7 +3,7 @@
 }
 
 .crd-Service_Icon {
-  fill: $color-light;
+  fill: $color-dark;
   max-width: 100px;
   margin: 0 auto 30px;
 }
@@ -12,6 +12,7 @@
   @include Font_30-36;
   @include Font_Heading;
   margin-bottom: 20px;
+  color: $color-accent;
 }
 
 .crd-Service_Text {
