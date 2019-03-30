@@ -31,8 +31,8 @@
 }
 
 .her-Hero_Title {
-  @include Font_50-60;
+  @include Font_60-66;
   @include Font_Heading;
   color: #fff;
-  margin-left: calc((1 / 12) * 100%);
+  margin-left: calc((2 / 12) * 100%);
 }
