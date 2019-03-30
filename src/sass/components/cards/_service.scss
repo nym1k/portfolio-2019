@@ -3,9 +3,58 @@
 }
 
 .crd-Service_Icon {
-  fill: $color-light;
+  fill: none;
   max-width: 100px;
   margin: 0 auto 30px;
+
+  svg {
+    // height: 100vh;
+    // width: 100vw;
+    // background-color: white;
+  }
+
+  path {
+    stroke: $color-light;
+    stroke-width: 6;
+  }
+
+  .v1 {
+    stroke-dasharray: 5000;
+    stroke-dashoffset: 5000;
+    animation-name: draw;
+    animation-duration: 5s;
+    animation-fill-mode: forwards; // Stay on the last frame
+    animation-iteration-count: 1; // Run only once
+    animation-timing-function: linear;
+  }
+
+  .v2 {
+    stroke-dasharray: 5000;
+    stroke-dashoffset: 5000;
+    animation-name: draw;
+    animation-duration: 5s;
+    animation-fill-mode: forwards; // Stay on the last frame
+    animation-iteration-count: 1; // Run only once
+    animation-timing-function: linear;
+    animation-delay: 0.5s;
+  }
+
+  .v3 {
+    stroke-dasharray: 5000;
+    stroke-dashoffset: 5000;
+    animation-name: draw;
+    animation-duration: 2s;
+    animation-fill-mode: forwards; // Stay on the last frame
+    animation-iteration-count: 1; // Run only once
+    animation-timing-function: linear;
+    animation-delay: 1s;
+  }
+
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
 }
 
 .crd-Service_Title {
