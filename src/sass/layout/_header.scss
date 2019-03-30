@@ -23,6 +23,10 @@
   display: flex;
 }
 
+.hd-Header_Title {
+  @include Font_Heading;
+}
+
 .hd-Header_Nav {
   width: 100%;
   display: flex;
@@ -53,6 +57,9 @@
 }
 
 .hd-Header_Link {
+  @include Font_16-24;
+  font-family: $font-heading;
   text-decoration: none;
+  letter-spacing: 1px;
   color: #fff;
 }

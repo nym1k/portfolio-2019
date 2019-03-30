@@ -106,6 +106,8 @@ li {
   font-size: 50px;
   line-height: 60px;
   font-family: "CallunaSans-Regular";
+  font-weight: 500;
+  letter-spacing: 0.6px;
   color: #fff;
   margin-left: calc((1 / 12) * 100%);
 }
@@ -149,6 +151,8 @@ li {
 .crd-Service_Title {
   font-size: 30px;
   line-height: 36px;
+  font-family: "CallunaSans-Regular";
+  font-weight: 500;
   letter-spacing: 0.6px;
   margin-bottom: 20px;
 }
@@ -185,6 +189,12 @@ li {
   display: flex;
 }
 
+.hd-Header_Title {
+  font-family: "CallunaSans-Regular";
+  font-weight: 500;
+  letter-spacing: 0.6px;
+}
+
 .hd-Header_Nav {
   width: 100%;
   display: flex;
@@ -215,7 +225,11 @@ li {
 }
 
 .hd-Header_Link {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "CallunaSans-Regular";
   text-decoration: none;
+  letter-spacing: 1px;
   color: #fff;
 }
 
@@ -258,6 +272,9 @@ li {
 .ft-Footer_Title {
   font-size: 30px;
   line-height: 36px;
+  font-family: "CallunaSans-Regular";
+  font-weight: 500;
+  letter-spacing: 0.6px;
   margin-bottom: 20px;
 }
 
@@ -318,6 +335,9 @@ li {
 .sec-Section_Title {
   font-size: 30px;
   line-height: 36px;
+  font-family: "CallunaSans-Regular";
+  font-weight: 500;
+  letter-spacing: 0.6px;
   margin-bottom: 20px;
 }
 
