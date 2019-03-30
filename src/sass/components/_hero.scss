@@ -32,6 +32,7 @@
 
 .her-Hero_Title {
   @include Font_50-60;
+  font-family: $font-heading;
   color: #fff;
   margin-left: calc((1 / 12) * 100%);
 }

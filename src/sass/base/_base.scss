@@ -8,6 +8,14 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'CallunaSans-Regular';
+    src: url('..fonts/CallunaSans-Regular-webfont.woff2') format('woff2'),
+         url('..fonts/CallunaSans-Regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 // Base Styles
 
 * {
