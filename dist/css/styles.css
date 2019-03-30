@@ -107,6 +107,12 @@ li {
   text-align: center;
 }
 
+.crd-Service_Icon {
+  fill: #f6f6f6;
+  max-width: 100px;
+  margin: 0 auto 30px;
+}
+
 .crd-Service_Title {
   font-size: 30px;
   line-height: 36px;
