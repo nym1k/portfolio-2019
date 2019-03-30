@@ -1,0 +1,59 @@
+
+.con-Contact_Columns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.con-Contact_Column {
+  flex: 0 0 calc(50% - 20px);
+}
+
+.con-Contact_Title {
+  @include Font_30-36;
+  @include Font_Heading;
+  margin-bottom: 20px;
+}
+
+.con-Contact_Text {
+  @include Font_16-24;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+
+  &:only-child {
+    margin-bottom: 0;
+  }
+}
+
+.con-Contact_Links {
+  margin-top: 30px;
+}
+
+.con-Contact_Link {
+  @include Font_16-24;
+  color: $color-light;
+  display: block;
+  letter-spacing: 1px;
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 35px;
+}
+
+.con-Contact_Icon {
+  width: 100%;
+  display: inline-block;
+  fill: $color-accent;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.con-Contact_Icon-phone {
+  width: 13px;
+  margin-left: 2px;
+}
+
+.con-Contact_Icon-email {
+  width: 18px;
+}

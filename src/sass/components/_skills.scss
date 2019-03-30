@@ -1,0 +1,34 @@
+.skl-Skills_Items {
+  width: 100%;
+  display: inline-grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-gap: $grid-gap;
+  // justify-items: center;
+  justify-items: center;
+  align-items: center;
+}
+
+.skl-Skills_Item {
+  width: 100%;
+  // grid-column: span 2;
+}
+
+.skl-Skills_Item:nth-child(3n) {
+  grid-column: span 2;
+}
+
+.skl-Skill {
+  text-align: center;
+  background-color: $color-light;
+  border-radius: 15px;
+  padding: 10px;
+  color: $color-dark;
+  letter-spacing: 1px;
+  font-family: $font-heading;
+}
+
+.skl-Skill-accent {
+  background-color: $color-accent;
+  color: $color-light;
+  font-weight: 500;
+}

@@ -1,7 +1,6 @@
 .ft-Footer {
-  padding-top: 80px;
-  background-color: $color-dark;
-  color: $color-light;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .ft-Footer_Inner {
@@ -9,72 +8,7 @@
 }
 
 .ft-Footer_Body {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.ft-Footer_Footer {
-  padding-top: 80px;
-  padding-bottom: $grid-gap;
   text-align: center;
-}
-
-.ft-Footer_Columns {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.ft-Footer_Column {
-  flex: 0 0 calc(50% - 20px);
-}
-
-.ft-Footer_Title {
-  @include Font_30-36;
-  @include Font_Heading;
-  margin-bottom: 20px;
-}
-
-.ft-Footer_Text {
-  @include Font_16-24;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
-
-  &:only-child {
-    margin-bottom: 0;
-  }
-}
-
-.ft-Footer_Links {
-  margin-top: 30px;
-}
-
-.ft-Footer_Link {
-  @include Font_16-24;
-  color: $color-light;
-  display: block;
-  letter-spacing: 1px;
-  position: relative;
-  margin-bottom: 20px;
-  padding-left: 35px;
-}
-
-.ft-Footer_Icon {
-  width: 100%;
-  display: inline-block;
-  fill: $color-accent;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-}
-
-.ft-Footer_Icon-phone {
-  width: 13px;
-  margin-left: 2px;
-}
-
-.ft-Footer_Icon-email {
-  width: 18px;
+  background-color: $color-light;
+  color: $color-dark;
 }

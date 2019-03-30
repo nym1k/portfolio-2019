@@ -23,6 +23,7 @@ body {
   font-family: "Calluna-Regular";
   background-color: #f6f6f6;
   font-size: 16px;
+  font-weight: 400;
 }
 
 a, a:focus, a:visited, a:active {
@@ -104,7 +105,8 @@ input::placeholder, textarea::placeholder {
   font-size: 16px;
   line-height: 24px;
   font-family: "Calluna-Regular";
-  font-weight: 500;
+  letter-spacing: 1px;
+  font-weight: 400;
   display: inline-block;
   padding: 10px 20px;
   text-align: center;
@@ -113,6 +115,70 @@ input::placeholder, textarea::placeholder {
   color: #f6f6f6;
   display: inline-block;
   width: 100%;
+}
+
+.con-Contact_Columns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.con-Contact_Column {
+  flex: 0 0 calc(50% - 20px);
+}
+
+.con-Contact_Title {
+  font-size: 30px;
+  line-height: 36px;
+  font-family: "CallunaSans-Regular";
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  margin-bottom: 20px;
+}
+
+.con-Contact_Text {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.con-Contact_Text:only-child {
+  margin-bottom: 0;
+}
+
+.con-Contact_Links {
+  margin-top: 30px;
+}
+
+.con-Contact_Link {
+  font-size: 16px;
+  line-height: 24px;
+  color: #f6f6f6;
+  display: block;
+  letter-spacing: 1px;
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 35px;
+}
+
+.con-Contact_Icon {
+  width: 100%;
+  display: inline-block;
+  fill: #e05038;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.con-Contact_Icon-phone {
+  width: 13px;
+  margin-left: 2px;
+}
+
+.con-Contact_Icon-email {
+  width: 18px;
 }
 
 .her-Hero {
@@ -218,12 +284,45 @@ input::placeholder, textarea::placeholder {
   margin-right: 0;
 }
 
+.skl-Skills_Items {
+  width: 100%;
+  display: inline-grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-gap: 40px;
+  justify-items: center;
+  align-items: center;
+}
+
+.skl-Skills_Item {
+  width: 100%;
+}
+
+.skl-Skills_Item:nth-child(3n) {
+  grid-column: span 2;
+}
+
+.skl-Skill {
+  text-align: center;
+  background-color: #f6f6f6;
+  border-radius: 15px;
+  padding: 10px;
+  color: #3b3a36;
+  letter-spacing: 1px;
+  font-family: "CallunaSans-Regular";
+}
+
+.skl-Skill-accent {
+  background-color: #e05038;
+  color: #f6f6f6;
+  font-weight: 500;
+}
+
 .crd-Service_Card {
   text-align: center;
 }
 
 .crd-Service_Icon {
-  fill: #3b3a36;
+  fill: #f6f6f6;
   max-width: 100px;
   margin: 0 auto 30px;
 }
@@ -319,9 +418,8 @@ input::placeholder, textarea::placeholder {
 }
 
 .ft-Footer {
-  padding-top: 80px;
-  background-color: #3b3a36;
-  color: #f6f6f6;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .ft-Footer_Inner {
@@ -334,79 +432,9 @@ input::placeholder, textarea::placeholder {
 }
 
 .ft-Footer_Body {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.ft-Footer_Footer {
-  padding-top: 80px;
-  padding-bottom: 40px;
   text-align: center;
-}
-
-.ft-Footer_Columns {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.ft-Footer_Column {
-  flex: 0 0 calc(50% - 20px);
-}
-
-.ft-Footer_Title {
-  font-size: 30px;
-  line-height: 36px;
-  font-family: "CallunaSans-Regular";
-  font-weight: 500;
-  letter-spacing: 0.6px;
-  margin-bottom: 20px;
-}
-
-.ft-Footer_Text {
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
-}
-
-.ft-Footer_Text:only-child {
-  margin-bottom: 0;
-}
-
-.ft-Footer_Links {
-  margin-top: 30px;
-}
-
-.ft-Footer_Link {
-  font-size: 16px;
-  line-height: 24px;
-  color: #f6f6f6;
-  display: block;
-  letter-spacing: 1px;
-  position: relative;
-  margin-bottom: 20px;
-  padding-left: 35px;
-}
-
-.ft-Footer_Icon {
-  width: 100%;
-  display: inline-block;
-  fill: #e05038;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-}
-
-.ft-Footer_Icon-phone {
-  width: 13px;
-  margin-left: 2px;
-}
-
-.ft-Footer_Icon-email {
-  width: 18px;
+  background-color: #f6f6f6;
+  color: #3b3a36;
 }
 
 .sec-Section {
