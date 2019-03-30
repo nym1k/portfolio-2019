@@ -21,7 +21,7 @@
 // Buttons
 
 @mixin button {
-  @include Font_16-24;
+  @include Font_16-28;
   font-family: $font-body;
   letter-spacing: 1px;
   font-weight: 400;
@@ -46,9 +46,14 @@
   line-height: 20px;
 }
 
-@mixin Font_16-24 {
+@mixin Font_16-28 {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 28px;
+}
+
+@mixin Font_24-30 {
+  font-size: 24px;
+  line-height: 30px;
 }
 
 @mixin Font_30-36 {

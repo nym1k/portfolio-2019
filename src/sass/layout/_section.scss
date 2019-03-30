@@ -1,10 +1,11 @@
 .sec-Section {
   @include spacer;
+  color: $color-dark;
 }
 
 .sec-Section-dark {
   background-color: $color-dark;
-  color: #fff;
+  color: $color-light;
 }
 
 .sec-Section_Inner {
@@ -18,19 +19,38 @@
 
 .sec-Section_Columns {
   display: flex;
+  justify-content: space-between;
   width: 100%;
 }
 
 .sec-Section_Column {
-  flex: 1;
+  flex: 0 0 calc(50% - 20px);
 }
 
-.sec-Section_Column-large {
-  flex: 2;
+// .sec-Section_Column-large {
+//   flex: 2 1 auto;
+//   margin-left: 40px;
+//   max-width: 100%;
+// }
+
+// .sec-Section_Image {
+//   max-width: 300px;
+// }
+
+.sec-Section_Image {
+  display: block;
+  margin: 0 auto;
 }
 
 .sec-Section_Image-round {
   border-radius: 50%;
+}
+
+.sec-Section_Content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 
 .sec-Section_Title {
@@ -40,11 +60,44 @@
 }
 
 .sec-Section_Text {
-  @include Font_16-24;
+  @include Font_16-28;
   letter-spacing: 1px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 
   &:only-child {
     margin-bottom: 0;
   }
+}
+
+.sec-Section_Underline {
+  display: inline-block;
+  position: relative;
+  cursor: default;
+
+  &::after {
+    content: '';
+    display: block;
+    background: $color-accent;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    bottom: 3px;
+    // left: 0;
+    left: 0;
+    border-radius: 3px;
+    transition: width .3s ease-out;
+  }
+
+  &:hover {
+    &::after {
+      right: 0;
+      left: auto;
+      width: 0;
+    }
+  }
+}
+
+.sec-Section_Text-lead {
+  @include Font_24-30;
+  margin-bottom: 20px;
 }

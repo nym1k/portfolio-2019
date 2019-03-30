@@ -16,7 +16,7 @@
 }
 
 .con-Contact_Text {
-  @include Font_16-24;
+  @include Font_16-28;
   letter-spacing: 1px;
   margin-bottom: 10px;
 
@@ -30,7 +30,7 @@
 }
 
 .con-Contact_Link {
-  @include Font_16-24;
+  @include Font_16-28;
   color: $color-light;
   display: block;
   letter-spacing: 1px;

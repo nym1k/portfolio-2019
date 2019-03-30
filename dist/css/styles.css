@@ -103,7 +103,7 @@ input::placeholder, textarea::placeholder {
 
 .frm-Form_Submit {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 28px;
   font-family: "Calluna-Regular";
   letter-spacing: 1px;
   font-weight: 400;
@@ -138,7 +138,7 @@ input::placeholder, textarea::placeholder {
 
 .con-Contact_Text {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 28px;
   letter-spacing: 1px;
   margin-bottom: 10px;
 }
@@ -153,7 +153,7 @@ input::placeholder, textarea::placeholder {
 
 .con-Contact_Link {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 28px;
   color: #f6f6f6;
   display: block;
   letter-spacing: 1px;
@@ -382,7 +382,7 @@ input::placeholder, textarea::placeholder {
 
 .crd-Service_Text {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 28px;
   letter-spacing: 1px;
 }
 
@@ -473,11 +473,12 @@ input::placeholder, textarea::placeholder {
 }
 
 .hd-Header_Body {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  align-items: center;
 }
 
 .hd-Header_Block {
+  flex: 0 0 33.33%;
   display: flex;
 }
 
@@ -514,6 +515,7 @@ input::placeholder, textarea::placeholder {
 .hd-Social_Icon {
   display: block;
   width: 24px;
+  height: 24px;
   fill: #fff;
   transition: fill .3s ease;
 }
@@ -524,7 +526,7 @@ input::placeholder, textarea::placeholder {
 
 .hd-Header_Link {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 28px;
   font-family: "CallunaSans-Regular";
   text-decoration: none;
   letter-spacing: 1px;
@@ -554,11 +556,12 @@ input::placeholder, textarea::placeholder {
 .sec-Section {
   padding-top: 80px;
   padding-bottom: 80px;
+  color: #3b3a36;
 }
 
 .sec-Section-dark {
   background-color: #3b3a36;
-  color: #fff;
+  color: #f6f6f6;
 }
 
 .sec-Section_Inner {
@@ -577,19 +580,28 @@ input::placeholder, textarea::placeholder {
 
 .sec-Section_Columns {
   display: flex;
+  justify-content: space-between;
   width: 100%;
 }
 
 .sec-Section_Column {
-  flex: 1;
+  flex: 0 0 calc(50% - 20px);
 }
 
-.sec-Section_Column-large {
-  flex: 2;
+.sec-Section_Image {
+  display: block;
+  margin: 0 auto;
 }
 
 .sec-Section_Image-round {
   border-radius: 50%;
+}
+
+.sec-Section_Content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 
 .sec-Section_Title {
@@ -603,13 +615,44 @@ input::placeholder, textarea::placeholder {
 
 .sec-Section_Text {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 28px;
   letter-spacing: 1px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .sec-Section_Text:only-child {
   margin-bottom: 0;
+}
+
+.sec-Section_Underline {
+  display: inline-block;
+  position: relative;
+  cursor: default;
+}
+
+.sec-Section_Underline::after {
+  content: '';
+  display: block;
+  background: #e05038;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  border-radius: 3px;
+  transition: width .3s ease-out;
+}
+
+.sec-Section_Underline:hover::after {
+  right: 0;
+  left: auto;
+  width: 0;
+}
+
+.sec-Section_Text-lead {
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */
