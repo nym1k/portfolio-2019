@@ -301,7 +301,7 @@ input::placeholder, textarea::placeholder {
   grid-column: span 2;
 }
 
-.skl-Skill {
+.skl-Skills_Skill {
   text-align: center;
   background-color: #f6f6f6;
   border-radius: 15px;
@@ -311,7 +311,7 @@ input::placeholder, textarea::placeholder {
   font-family: "CallunaSans-Regular";
 }
 
-.skl-Skill-accent {
+.skl-Skills_Item-accent .skl-Skills_Skill {
   background-color: #e05038;
   color: #f6f6f6;
   font-weight: 500;
@@ -404,8 +404,14 @@ input::placeholder, textarea::placeholder {
 }
 
 .hd-Social_Icon {
+  display: block;
   width: 24px;
   fill: #fff;
+  transition: fill .3s ease;
+}
+
+.hd-Social_Icon:hover {
+  fill: #e05038;
 }
 
 .hd-Header_Link {

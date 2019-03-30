@@ -17,7 +17,7 @@
   grid-column: span 2;
 }
 
-.skl-Skill {
+.skl-Skills_Skill {
   text-align: center;
   background-color: $color-light;
   border-radius: 15px;
@@ -25,10 +25,10 @@
   color: $color-dark;
   letter-spacing: 1px;
   font-family: $font-heading;
-}
 
-.skl-Skill-accent {
-  background-color: $color-accent;
-  color: $color-light;
-  font-weight: 500;
+  .skl-Skills_Item-accent & {
+    background-color: $color-accent;
+    color: $color-light;
+    font-weight: 500;
+  }
 }

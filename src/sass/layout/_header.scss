@@ -52,8 +52,14 @@
 }
 
 .hd-Social_Icon {
+  display: block;
   width: 24px;
   fill: #fff;
+  transition: fill .3s ease;
+
+  &:hover {
+    fill: $color-link;
+  }
 }
 
 .hd-Header_Link {
