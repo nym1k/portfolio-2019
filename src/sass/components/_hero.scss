@@ -17,7 +17,7 @@
 }
 
 .her-Hero_Inner {
-  @include inner;
+  @include grid_container;
 }
 
 .her-Hero_Body {
@@ -29,12 +29,40 @@
   position: relative;
 }
 
-.her-Hero_Content {
+.her-Hero_Button {
+  fill: $color-accent;
+  width: 40px;
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  transition: transform .3s ease;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 5px;
+    background-color: $color-accent;
+    height: 0;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 1px;
+    transition: height .3s ease;
+  }
+
+  &:hover {
+    transform: translateY(5px);
+    &::after {
+      height: 45px;
+    }
+  }
 }
 
 .her-Hero_Title {
   @include Font_60-66;
   @include Font_Heading;
   color: #fff;
-  margin-left: calc((1 / 12) * 100%);
+  // margin-left: calc((1 / 12) * 100%);
 }
