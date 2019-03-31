@@ -1,5 +1,4 @@
 $grid-container: 1360px;
-$grid-gap: 40px;
 
 // Colours
 
@@ -17,3 +16,14 @@ $font-body: 'Calluna-Regular';
 // dark grey #3b3a36
 // deep red #935347
 // teal? #64706c
+
+
+:root {
+  --gutter: 20px;
+}
+
+@include Breakpoint('xs') {
+  :root {
+    --gutter: 40px;
+  }
+}

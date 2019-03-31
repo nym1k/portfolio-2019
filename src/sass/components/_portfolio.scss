@@ -5,7 +5,7 @@
 }
 
 .prt-Portfolio_Item {
-  margin-bottom: $grid-gap;
+  margin-bottom: var(--gutter);
 
   &:last-child {
     margin-bottom: 0;
@@ -14,7 +14,7 @@
   @include Breakpoint('md') {
     flex: 1;
 
-    margin-right: $grid-gap;
+    margin-right: var(--gutter);
 
     &:last-child {
       margin-right: 0;

@@ -5,7 +5,7 @@
 }
 
 .srv-Service_Item {
-  margin-bottom: $grid-gap;
+  margin-bottom: var(--gutter);
 
   &:last-child {
     margin-bottom: 0;
@@ -13,7 +13,7 @@
 
   @include Breakpoint('sm') {
     flex: 1;
-    margin-right: $grid-gap;
+    margin-right: var(--gutter);
     margin-bottom: 0;
 
     &:last-child {

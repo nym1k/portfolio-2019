@@ -1,11 +1,10 @@
 .crd-Project_Card {
   position: relative;
-  margin-bottom: -40px;
-  padding-bottom: 40px;
-}
 
-.crd-Project_FauxLink {
-
+  @include Breakpoint('md') {
+    margin-bottom: calc(var(--gutter) * -1);
+    padding-bottom: var(--gutter);
+  }
 }
 
 .crd-Project_ImageWrapper {
@@ -60,7 +59,7 @@
     transition: transform .3s ease, color .3s ease;
 
     .crd-Project_Card:hover & {
-      transform: translateY(40px);
+      transform: translateY(var(--gutter));
       color: $color-dark;
     }
   }

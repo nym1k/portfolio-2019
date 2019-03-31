@@ -13,7 +13,7 @@
 }
 
 .sec-Section_Header {
-  padding-bottom: $grid-gap;
+  padding-bottom: var(--gutter);
   text-align: center;
 }
 
@@ -26,7 +26,11 @@
 }
 
 .sec-Section_Column {
-  margin-bottom: $grid-gap;
+  margin-bottom: calc(var(--gutter) * 2);
+  
+  @include Breakpoint('xs') {
+    margin-bottom: var(--gutter);
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -77,6 +81,7 @@
   letter-spacing: 1px;
   margin-bottom: 20px;
 
+  &:last-child,
   &:only-child {
     margin-bottom: 0;
   }

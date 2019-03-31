@@ -1,6 +1,6 @@
 .ft-Footer {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: var(--gutter);
+  padding-bottom: var(--gutter);
 }
 
 .ft-Footer_Inner {

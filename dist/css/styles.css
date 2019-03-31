@@ -1,3 +1,13 @@
+:root {
+  --gutter: 20px;
+}
+
+@media only screen and (min-width: 451px) {
+  :root {
+    --gutter: 40px;
+  }
+}
+
 @font-face {
   font-family: 'Calluna-Regular';
   src: url("https://nym1k.github.io/portfolio-2019/dist/fonts/Calluna-Regular-webfont.woff2") format("woff2"), url("https://nym1k.github.io/portfolio-2019/dist/fonts/Calluna-Regular-webfont.woff") format("woff");
@@ -200,12 +210,12 @@ input::placeholder, textarea::placeholder {
 }
 
 .her-Hero_Inner {
-  max-width: 1440px;
+  max-width: calc($grid-container + (var(--gutter) * 2));
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 40px;
-  padding-left: 40px;
+  padding-right: var(--gutter);
+  padding-left: var(--gutter);
 }
 
 .her-Hero_Body {
@@ -250,12 +260,19 @@ input::placeholder, textarea::placeholder {
 }
 
 .her-Hero_Title {
-  font-size: 60px;
-  line-height: 66px;
+  font-size: 40px;
+  line-height: 46px;
   font-family: "CallunaSans-Regular";
   font-weight: 500;
   letter-spacing: 0.6px;
   color: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+  .her-Hero_Title {
+    font-size: 60px;
+    line-height: 66px;
+  }
 }
 
 @media only screen and (min-width: 900px) {
@@ -265,7 +282,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .prt-Portfolio_Item {
-  margin-bottom: 40px;
+  margin-bottom: var(--gutter);
 }
 
 .prt-Portfolio_Item:last-child {
@@ -275,7 +292,7 @@ input::placeholder, textarea::placeholder {
 @media only screen and (min-width: 900px) {
   .prt-Portfolio_Item {
     flex: 1;
-    margin-right: 40px;
+    margin-right: var(--gutter);
   }
   .prt-Portfolio_Item:last-child {
     margin-right: 0;
@@ -289,7 +306,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .srv-Service_Item {
-  margin-bottom: 40px;
+  margin-bottom: var(--gutter);
 }
 
 .srv-Service_Item:last-child {
@@ -299,7 +316,7 @@ input::placeholder, textarea::placeholder {
 @media only screen and (min-width: 768px) {
   .srv-Service_Item {
     flex: 1;
-    margin-right: 40px;
+    margin-right: var(--gutter);
     margin-bottom: 0;
   }
   .srv-Service_Item:last-child {
@@ -309,7 +326,7 @@ input::placeholder, textarea::placeholder {
 
 .skl-Skills_Items {
   display: inline-grid;
-  grid-gap: 40px;
+  grid-gap: var(--gutter);
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -419,8 +436,13 @@ input::placeholder, textarea::placeholder {
 
 .crd-Project_Card {
   position: relative;
-  margin-bottom: -40px;
-  padding-bottom: 40px;
+}
+
+@media only screen and (min-width: 900px) {
+  .crd-Project_Card {
+    margin-bottom: calc(var(--gutter) * -1);
+    padding-bottom: var(--gutter);
+  }
 }
 
 @media only screen and (min-width: 900px) {
@@ -479,7 +501,7 @@ input::placeholder, textarea::placeholder {
     transition: transform .3s ease, color .3s ease;
   }
   .crd-Project_Card:hover .crd-Project_Text {
-    transform: translateY(40px);
+    transform: translateY(var(--gutter));
     color: #3b3a36;
   }
 }
@@ -506,12 +528,12 @@ input::placeholder, textarea::placeholder {
 }
 
 .hd-Header_Inner {
-  max-width: 1440px;
+  max-width: calc($grid-container + (var(--gutter) * 2));
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 40px;
-  padding-left: 40px;
+  padding-right: var(--gutter);
+  padding-left: var(--gutter);
 }
 
 .hd-Header_Body {
@@ -576,17 +598,17 @@ input::placeholder, textarea::placeholder {
 }
 
 .ft-Footer {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: var(--gutter);
+  padding-bottom: var(--gutter);
 }
 
 .ft-Footer_Inner {
-  max-width: 1440px;
+  max-width: calc($grid-container + (var(--gutter) * 2));
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 40px;
-  padding-left: 40px;
+  padding-right: var(--gutter);
+  padding-left: var(--gutter);
 }
 
 .ft-Footer_Body {
@@ -596,8 +618,8 @@ input::placeholder, textarea::placeholder {
 }
 
 .sec-Section {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: calc(var(--gutter) * 2);
+  padding-bottom: calc(var(--gutter) * 2);
   color: #3b3a36;
 }
 
@@ -607,16 +629,16 @@ input::placeholder, textarea::placeholder {
 }
 
 .sec-Section_Inner {
-  max-width: 1440px;
+  max-width: calc($grid-container + (var(--gutter) * 2));
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 40px;
-  padding-left: 40px;
+  padding-right: var(--gutter);
+  padding-left: var(--gutter);
 }
 
 .sec-Section_Header {
-  padding-bottom: 40px;
+  padding-bottom: var(--gutter);
   text-align: center;
 }
 
@@ -629,7 +651,13 @@ input::placeholder, textarea::placeholder {
 }
 
 .sec-Section_Column {
-  margin-bottom: 40px;
+  margin-bottom: calc(var(--gutter) * 2);
+}
+
+@media only screen and (min-width: 451px) {
+  .sec-Section_Column {
+    margin-bottom: var(--gutter);
+  }
 }
 
 .sec-Section_Column:last-child {
@@ -687,7 +715,7 @@ input::placeholder, textarea::placeholder {
   margin-bottom: 20px;
 }
 
-.sec-Section_Text:only-child {
+.sec-Section_Text:last-child, .sec-Section_Text:only-child {
   margin-bottom: 0;
 }
 
