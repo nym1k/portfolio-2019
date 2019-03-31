@@ -233,12 +233,12 @@ input::placeholder, textarea::placeholder {
   position: absolute;
   width: 5px;
   background-color: #e05038;
-  height: 0;
-  top: -20px;
+  top: 25px;
+  bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 1px;
-  transition: height .3s ease;
+  transition: top .3s ease;
 }
 
 .her-Hero_Button:hover {
@@ -246,7 +246,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .her-Hero_Button:hover::after {
-  height: 45px;
+  top: -20px;
 }
 
 .her-Hero_Title {

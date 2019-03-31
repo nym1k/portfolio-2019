@@ -44,18 +44,18 @@
     position: absolute;
     width: 5px;
     background-color: $color-accent;
-    height: 0;
-    top: -20px;
+    top: 25px;
+    bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 1px;
-    transition: height .3s ease;
+    transition: top .3s ease;
   }
 
   &:hover {
     transform: translateY(5px);
     &::after {
-      height: 45px;
+      top: -20px;
     }
   }
 }
