@@ -15,6 +15,9 @@
 .sec-Section_Header {
   text-align: center;
   padding-bottom: 40px;
+  @include Breakpoint('sm') {
+    padding-bottom: 80px;
+  }
 }
 
 .sec-Section_Columns {
@@ -50,20 +53,28 @@
   }
 }
 
+.sec-Section_ImageWrapper {
+  @include Breakpoint('lg') {
+    position: relative;
+    height: 100%;
+  }
+}
+
 .sec-Section_Image {
   display: block;
   margin: 0 auto;
+  @include Breakpoint('lg') {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-height: 100%;
+  }
 }
 
 .sec-Section_Image-round {
   border-radius: 50%;
-}
-
-.sec-Section_Content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
 }
 
 .sec-Section_Title {

@@ -32,6 +32,7 @@
 .her-Hero_Button {
   fill: $color-accent;
   width: 40px;
+  height: 23.33px;
   position: absolute;
   bottom: var(--gutter);
   right: 0;
@@ -47,7 +48,7 @@
       width: 5px;
       background-color: $color-accent;
       top: 25px;
-      bottom: 15px;
+      bottom: 5px;
       left: 50%;
       transform: translateX(-50%);
       border-radius: 1px;
@@ -57,7 +58,7 @@
     &:hover {
       transform: translateY(5px);
       &::after {
-        top: -20px;
+        top: -30px;
       }
     }
   }

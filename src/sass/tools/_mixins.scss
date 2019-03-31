@@ -1,10 +1,15 @@
 @mixin Spacer {
   padding-top: var(--grid-gap);
   padding-bottom: var(--grid-gap);
+
+  @include Breakpoint('sm') {
+    padding-top: calc(var(--grid-gap) * 2);
+    padding-bottom: calc(var(--grid-gap) * 2);
+  }
 }
 
 @mixin Inner {
-  max-width: calc($grid-container + (var(--gutter) * 2));
+  max-width: calc(var(--grid-container) + (var(--gutter) * 2));
   width: 100%;
   margin-right: auto;
   margin-left: auto;

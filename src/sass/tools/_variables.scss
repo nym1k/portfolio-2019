@@ -21,6 +21,7 @@ $font-body: 'Calluna-Regular';
 :root {
   --gutter: 20px;
   --grid-gap: 40px;
+  --grid-container: 1360px;
 }
 
 @include Breakpoint('xs') {
