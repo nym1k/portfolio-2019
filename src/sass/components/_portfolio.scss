@@ -1,13 +1,23 @@
 .prt-Portfolio_Items {
-  display: flex;
+  @include Breakpoint('md') {
+    display: flex;
+  }
 }
 
 .prt-Portfolio_Item {
-  flex: 1;
-
-  margin-right: $grid-gap;
+  margin-bottom: $grid-gap;
 
   &:last-child {
-    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  @include Breakpoint('md') {
+    flex: 1;
+
+    margin-right: $grid-gap;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
