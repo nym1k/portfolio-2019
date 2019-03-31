@@ -1,0 +1,65 @@
+.drw-Drawer {
+  @include Spacer;
+  height: 100vh;
+  width: 450px;
+  max-width: 80%;
+  position: fixed;
+  top: 0;
+  right: -500px;
+  bottom: 0;
+  z-index: 24;
+  background-color: $color-light;
+  display: flex;
+}
+
+.drw-Drawer_Inner {
+  @include Inner;
+}
+
+.drw-Drawer_Close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 24px;
+  height: 24px;
+}
+
+.drw-Drawer_CloseLine {
+  width: 30px;
+  height: 3px;
+  background-color: $color-dark;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 3px;
+  transition: background-color .3s ease;
+  cursor: pointer;
+  outline: none;
+
+  .drw-Drawer_Close:hover & {
+    background-color: $color-link;
+  }
+}
+
+.drw-Drawer_CloseLine-one {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.drw-Drawer_CloseLine-two {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.drw-Drawer_Social {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.drw-Drawer_Body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}

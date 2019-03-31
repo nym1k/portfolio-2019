@@ -1,0 +1,15 @@
+.drw-Drawers {
+  z-index: 20;
+}
+
+.drw-Drawers_Overlay {
+  z-index: 22;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba($color-light, 0.4);
+  opacity: 0;
+  visibility: hidden;
+}

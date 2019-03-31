@@ -1,0 +1,17 @@
+.drw-Nav {
+  width: 100%;
+}
+
+.drw-Nav_Item {
+  text-align: center;
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.drw-Nav_Link {
+  @include Font_30-36;
+  @include Font_Heading;
+}
