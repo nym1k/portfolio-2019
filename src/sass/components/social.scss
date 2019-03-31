@@ -1,6 +1,6 @@
 .soc-Social_Items {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: var(--gutter);
   justify-content: center;
 
   @include Breakpoint('sm') {
