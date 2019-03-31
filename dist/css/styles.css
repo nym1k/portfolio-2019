@@ -626,8 +626,8 @@ input::placeholder, textarea::placeholder {
 
 .sec-Section_Underline {
   display: inline-block;
-  position: relative;
   cursor: default;
+  position: relative;
 }
 
 .sec-Section_Underline::after {
@@ -652,7 +652,32 @@ input::placeholder, textarea::placeholder {
 .sec-Section_Text-lead {
   font-size: 24px;
   line-height: 30px;
+  font-weight: 400;
   margin-bottom: 20px;
+}
+
+.sec-Section_Link {
+  position: relative;
+  display: inline-block;
+}
+
+.sec-Section_Link::after {
+  content: '';
+  display: block;
+  background: #e05038;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  border-radius: 3px;
+  transition: width .3s ease-out;
+}
+
+.sec-Section_Link:hover::after {
+  right: 0;
+  left: auto;
+  width: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
