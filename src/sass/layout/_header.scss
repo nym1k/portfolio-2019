@@ -52,18 +52,6 @@
   }
 }
 
-.hd-Social_Icon {
-  display: block;
-  width: 24px;
-  height: 24px;
-  fill: #fff;
-  transition: fill .3s ease;
-
-  &:hover {
-    fill: $color-link;
-  }
-}
-
 .hd-Header_Link {
   @include Font_16-28;
   font-family: $font-heading;

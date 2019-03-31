@@ -11,4 +11,19 @@
   text-align: center;
   background-color: $color-light;
   color: $color-dark;
+  @include Breakpoint('sm') {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+}
+
+.ft-Footer_Block {
+  @include Breakpoint('sm') {
+    flex: 0 0 calc((100 / 3) * 1%);
+  }
+}
+
+.ft-Footer_Block-social {
+  order: 3;
 }

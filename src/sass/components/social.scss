@@ -1,0 +1,34 @@
+.soc-Social_Items {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
+
+  @include Breakpoint('sm') {
+    justify-content: flex-end;
+    margin-bottom: 0;
+  }
+}
+
+.soc-Social_Item {
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.soc-Social_Icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  fill: $color-link;
+  transition: fill .3s ease;
+
+  @include Breakpoint('sm') {
+    fill: $color-dark;
+  }
+
+  &:hover {
+    fill: $color-link;
+  }
+}

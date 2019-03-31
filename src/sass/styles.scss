@@ -4,13 +4,14 @@
 @import "base/base";
 @import "base/form";
 
+@import "components/cards/service";
+@import "components/cards/project";
 @import "components/contact";
 @import "components/hero";
 @import "components/portfolio";
 @import "components/service";
 @import "components/skills";
-@import "components/cards/service";
-@import "components/cards/project";
+@import "components/social";
 
 @import "layout/header";
 @import "layout/footer";

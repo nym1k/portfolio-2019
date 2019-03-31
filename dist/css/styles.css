@@ -129,6 +129,158 @@ input::placeholder, textarea::placeholder {
   width: 100%;
 }
 
+.crd-Service_Card {
+  text-align: center;
+}
+
+.crd-Service_Icon {
+  fill: none;
+  max-width: 100px;
+  margin: 0 auto 20px;
+}
+
+.crd-Service_Icon path {
+  stroke: #f6f6f6;
+  stroke-width: 6;
+}
+
+.crd-Service_Icon .v1 {
+  stroke-dasharray: 5000;
+  stroke-dashoffset: 5000;
+  animation-name: draw;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+.crd-Service_Icon .v2 {
+  stroke-dasharray: 5000;
+  stroke-dashoffset: 5000;
+  animation-name: draw;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-delay: 0.5s;
+}
+
+.crd-Service_Icon .v3 {
+  stroke-dasharray: 5000;
+  stroke-dashoffset: 5000;
+  animation-name: draw;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.crd-Service_Title {
+  font-size: 30px;
+  line-height: 36px;
+  font-family: "CallunaSans-Regular";
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  margin-bottom: 20px;
+  color: #e05038;
+}
+
+.crd-Service_Text {
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 1px;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.crd-Project_Card {
+  position: relative;
+}
+
+@media only screen and (min-width: 900px) {
+  .crd-Project_Card {
+    margin-bottom: calc(var(--grid-gap) * -1);
+    padding-bottom: var(--grid-gap);
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .crd-Project_ImageWrapper {
+    position: relative;
+  }
+  .crd-Project_ImageWrapper::after {
+    content: '';
+    display: block;
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.65) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.65) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.65) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+    /* IE6-9 */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    transition: opacity .3s ease, visibility .3s ease;
+  }
+  .crd-Project_Card:hover .crd-Project_ImageWrapper::after {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.crd-Project_Image {
+  width: 100%;
+  display: block;
+}
+
+.crd-Project_Text {
+  font-family: "CallunaSans-Regular";
+  letter-spacing: 0.6px;
+  padding: 10px;
+  background-color: #3b3a36;
+  color: #f6f6f6;
+  text-align: center;
+}
+
+@media only screen and (min-width: 900px) {
+  .crd-Project_Text {
+    background: none;
+    padding: 0;
+    padding-top: 0;
+    position: absolute;
+    bottom: 50px;
+    left: 10px;
+    z-index: 3;
+    color: #f6f6f6;
+    transition: transform .3s ease, color .3s ease;
+  }
+  .crd-Project_Card:hover .crd-Project_Text {
+    transform: translateY(var(--grid-gap));
+    color: #3b3a36;
+  }
+}
+
+.crd-Project_FauxLink {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+
 .con-Contact_Columns {
   display: flex;
   justify-content: space-between;
@@ -369,156 +521,43 @@ input::placeholder, textarea::placeholder {
   font-weight: 500;
 }
 
-.crd-Service_Card {
-  text-align: center;
-}
-
-.crd-Service_Icon {
-  fill: none;
-  max-width: 100px;
-  margin: 0 auto 20px;
-}
-
-.crd-Service_Icon path {
-  stroke: #f6f6f6;
-  stroke-width: 6;
-}
-
-.crd-Service_Icon .v1 {
-  stroke-dasharray: 5000;
-  stroke-dashoffset: 5000;
-  animation-name: draw;
-  animation-duration: 5s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
-}
-
-.crd-Service_Icon .v2 {
-  stroke-dasharray: 5000;
-  stroke-dashoffset: 5000;
-  animation-name: draw;
-  animation-duration: 5s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
-  animation-delay: 0.5s;
-}
-
-.crd-Service_Icon .v3 {
-  stroke-dasharray: 5000;
-  stroke-dashoffset: 5000;
-  animation-name: draw;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
-  animation-delay: 1s;
-}
-
-@keyframes draw {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-.crd-Service_Title {
-  font-size: 30px;
-  line-height: 36px;
-  font-family: "CallunaSans-Regular";
-  font-weight: 500;
-  letter-spacing: 0.6px;
+.soc-Social_Items {
+  display: flex;
   margin-bottom: 20px;
-  color: #e05038;
+  justify-content: center;
 }
 
-.crd-Service_Text {
-  font-size: 16px;
-  line-height: 28px;
-  letter-spacing: 1px;
-  max-width: 450px;
-  margin: 0 auto;
-}
-
-.crd-Project_Card {
-  position: relative;
-}
-
-@media only screen and (min-width: 900px) {
-  .crd-Project_Card {
-    margin-bottom: calc(var(--grid-gap) * -1);
-    padding-bottom: var(--grid-gap);
+@media only screen and (min-width: 768px) {
+  .soc-Social_Items {
+    justify-content: flex-end;
+    margin-bottom: 0;
   }
 }
 
-@media only screen and (min-width: 900px) {
-  .crd-Project_ImageWrapper {
-    position: relative;
-  }
-  .crd-Project_ImageWrapper::after {
-    content: '';
-    display: block;
-    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.65) 100%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.65) 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.65) 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
-    /* IE6-9 */
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 2;
-    transition: opacity .3s ease, visibility .3s ease;
-  }
-  .crd-Project_Card:hover .crd-Project_ImageWrapper::after {
-    opacity: 0;
-    visibility: hidden;
-  }
+.soc-Social_Item {
+  margin-right: 20px;
 }
 
-.crd-Project_Image {
-  width: 100%;
+.soc-Social_Item:last-child {
+  margin-right: 0;
+}
+
+.soc-Social_Icon {
   display: block;
+  width: 24px;
+  height: 24px;
+  fill: #e05038;
+  transition: fill .3s ease;
 }
 
-.crd-Project_Text {
-  font-family: "CallunaSans-Regular";
-  letter-spacing: 0.6px;
-  padding: 10px;
-  background-color: #3b3a36;
-  color: #f6f6f6;
-  text-align: center;
-}
-
-@media only screen and (min-width: 900px) {
-  .crd-Project_Text {
-    background: none;
-    padding: 0;
-    padding-top: 0;
-    position: absolute;
-    bottom: 50px;
-    left: 10px;
-    z-index: 3;
-    color: #f6f6f6;
-    transition: transform .3s ease, color .3s ease;
-  }
-  .crd-Project_Card:hover .crd-Project_Text {
-    transform: translateY(var(--grid-gap));
-    color: #3b3a36;
+@media only screen and (min-width: 768px) {
+  .soc-Social_Icon {
+    fill: #3b3a36;
   }
 }
 
-.crd-Project_FauxLink {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 3;
+.soc-Social_Icon:hover {
+  fill: #e05038;
 }
 
 .hd-Header {
@@ -582,18 +621,6 @@ input::placeholder, textarea::placeholder {
   margin-right: 0;
 }
 
-.hd-Social_Icon {
-  display: block;
-  width: 24px;
-  height: 24px;
-  fill: #fff;
-  transition: fill .3s ease;
-}
-
-.hd-Social_Icon:hover {
-  fill: #e05038;
-}
-
 .hd-Header_Link {
   font-size: 16px;
   line-height: 28px;
@@ -621,6 +648,24 @@ input::placeholder, textarea::placeholder {
   text-align: center;
   background-color: #f6f6f6;
   color: #3b3a36;
+}
+
+@media only screen and (min-width: 768px) {
+  .ft-Footer_Body {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .ft-Footer_Block {
+    flex: 0 0 calc((100 / 3) * 1%);
+  }
+}
+
+.ft-Footer_Block-social {
+  order: 3;
 }
 
 .sec-Section {
