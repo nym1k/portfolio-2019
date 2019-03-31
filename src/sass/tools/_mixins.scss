@@ -1,26 +1,20 @@
-@mixin spacer {
+@mixin Spacer {
   padding-top: 80px;
   padding-bottom: 80px;
 }
 
-@mixin inner {
-  padding-right: $grid-gap;
-  padding-left: $grid-gap;
-}
-
-// Grid
-
-@mixin grid_container {
-  @include inner;
+@mixin Inner {
   max-width: $grid-container + ($grid-gap * 2);
   width: 100%;
   margin-right: auto;
   margin-left: auto;
+  padding-right: $grid-gap;
+  padding-left: $grid-gap;
 }
 
 // Buttons
 
-@mixin button {
+@mixin Button {
   @include Font_16-28;
   font-family: $font-body;
   letter-spacing: 1px;
@@ -31,6 +25,34 @@
   border-radius: 3px;
   background-color: $color-accent;
   color: $color-light;
+}
+
+// Animation
+
+@mixin Animate_Underline {
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: '';
+    display: block;
+    background: $color-accent;
+    height: 1px;
+    width: 0;
+    position: absolute;
+    bottom: 3px;
+    right: 0;
+    border-radius: 3px;
+    transition: width .3s ease-out;
+  }
+
+  &:hover {
+    &::after {
+      right: auto;
+      left: 0;
+      width: 100%;
+    }
+  }
 }
 
 // Fonts

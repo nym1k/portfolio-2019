@@ -11,7 +11,7 @@
 }
 
 .hd-Header_Inner {
-  @include grid_container;
+  @include Inner;
 }
 
 .hd-Header_Body {

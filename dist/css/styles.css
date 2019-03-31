@@ -200,12 +200,12 @@ input::placeholder, textarea::placeholder {
 }
 
 .her-Hero_Inner {
-  padding-right: 40px;
-  padding-left: 40px;
   max-width: 1440px;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
+  padding-right: 40px;
+  padding-left: 40px;
 }
 
 .her-Hero_Body {
@@ -464,12 +464,12 @@ input::placeholder, textarea::placeholder {
 }
 
 .hd-Header_Inner {
-  padding-right: 40px;
-  padding-left: 40px;
   max-width: 1440px;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
+  padding-right: 40px;
+  padding-left: 40px;
 }
 
 .hd-Header_Body {
@@ -539,12 +539,12 @@ input::placeholder, textarea::placeholder {
 }
 
 .ft-Footer_Inner {
-  padding-right: 40px;
-  padding-left: 40px;
   max-width: 1440px;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
+  padding-right: 40px;
+  padding-left: 40px;
 }
 
 .ft-Footer_Body {
@@ -565,12 +565,12 @@ input::placeholder, textarea::placeholder {
 }
 
 .sec-Section_Inner {
-  padding-right: 40px;
-  padding-left: 40px;
   max-width: 1440px;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
+  padding-right: 40px;
+  padding-left: 40px;
 }
 
 .sec-Section_Header {
@@ -657,8 +657,8 @@ input::placeholder, textarea::placeholder {
 }
 
 .sec-Section_Link {
-  position: relative;
   display: inline-block;
+  position: relative;
 }
 
 .sec-Section_Link::after {

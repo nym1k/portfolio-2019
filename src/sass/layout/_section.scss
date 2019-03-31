@@ -1,5 +1,5 @@
 .sec-Section {
-  @include spacer;
+  @include Spacer;
   color: $color-dark;
 }
 
@@ -9,7 +9,7 @@
 }
 
 .sec-Section_Inner {
-  @include grid_container;
+  @include Inner;
 }
 
 .sec-Section_Header {
@@ -103,8 +103,8 @@
 }
 
 .sec-Section_Link {
-  position: relative;
   display: inline-block;
+  position: relative;
 
   &::after {
     content: '';
