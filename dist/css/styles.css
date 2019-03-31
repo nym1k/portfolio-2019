@@ -588,6 +588,14 @@ input::placeholder, textarea::placeholder {
   flex: 0 0 calc(50% - 20px);
 }
 
+.sec-Section_Column-small {
+  flex: 0 0 calc(33% - 20px);
+}
+
+.sec-Section_Column-large {
+  flex: 0 0 calc(66% - 20px);
+}
+
 .sec-Section_Image {
   display: block;
   margin: 0 auto;
@@ -625,9 +633,9 @@ input::placeholder, textarea::placeholder {
 }
 
 .sec-Section_Underline {
+  position: relative;
   display: inline-block;
   cursor: default;
-  position: relative;
 }
 
 .sec-Section_Underline::after {
@@ -657,8 +665,8 @@ input::placeholder, textarea::placeholder {
 }
 
 .sec-Section_Link {
-  display: inline-block;
   position: relative;
+  display: inline-block;
 }
 
 .sec-Section_Link::after {

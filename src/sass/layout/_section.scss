@@ -27,15 +27,13 @@
   flex: 0 0 calc(50% - 20px);
 }
 
-// .sec-Section_Column-large {
-//   flex: 2 1 auto;
-//   margin-left: 40px;
-//   max-width: 100%;
-// }
+.sec-Section_Column-small {
+  flex: 0 0 calc(33% - 20px);
+}
 
-// .sec-Section_Image {
-//   max-width: 300px;
-// }
+.sec-Section_Column-large {
+  flex: 0 0 calc(66% - 20px);
+}
 
 .sec-Section_Image {
   display: block;
@@ -70,30 +68,9 @@
 }
 
 .sec-Section_Underline {
+  @include Animate_Underline;
   display: inline-block;
   cursor: default;
-  position: relative;
-
-  &::after {
-    content: '';
-    display: block;
-    background: $color-accent;
-    height: 1px;
-    width: 100%;
-    position: absolute;
-    bottom: 3px;
-    left: 0;
-    border-radius: 3px;
-    transition: width .3s ease-out;
-  }
-
-  &:hover {
-    &::after {
-      right: 0;
-      left: auto;
-      width: 0;
-    }
-  }
 }
 
 .sec-Section_Text-lead {
@@ -103,27 +80,6 @@
 }
 
 .sec-Section_Link {
+  @include Animate_Underline;
   display: inline-block;
-  position: relative;
-
-  &::after {
-    content: '';
-    display: block;
-    background: $color-accent;
-    height: 1px;
-    width: 100%;
-    position: absolute;
-    bottom: 3px;
-    left: 0;
-    border-radius: 3px;
-    transition: width .3s ease-out;
-  }
-
-  &:hover {
-    &::after {
-      right: 0;
-      left: auto;
-      width: 0;
-    }
-  }
 }

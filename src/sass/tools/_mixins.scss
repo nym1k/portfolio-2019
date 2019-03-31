@@ -31,26 +31,25 @@
 
 @mixin Animate_Underline {
   position: relative;
-  display: inline-block;
 
   &::after {
     content: '';
     display: block;
     background: $color-accent;
     height: 1px;
-    width: 0;
+    width: 100%;
     position: absolute;
     bottom: 3px;
-    right: 0;
+    left: 0;
     border-radius: 3px;
     transition: width .3s ease-out;
   }
 
   &:hover {
     &::after {
-      right: auto;
-      left: 0;
-      width: 100%;
+      right: 0;
+      left: auto;
+      width: 0;
     }
   }
 }
