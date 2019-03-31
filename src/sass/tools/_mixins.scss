@@ -54,6 +54,40 @@
   }
 }
 
+// Breakpoints
+
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint == 'xs' {
+    @media only screen and (min-width: 451px) {
+      @content;
+    }
+  } @else if $breakpoint == 'sm' {
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == 'md' {
+    @media only screen and (min-width: 900px) {
+      @content;
+    }
+  } @else if $breakpoint == 'lg' {
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+  } @else if $breakpoint == 'xlg' {
+    @media only screen and (min-width: 1440px) {
+      @content;
+    }
+  } @else if $breakpoint == 'xxs-viewport' {
+    @media only screen and (max-width: 450px) {
+      @content;
+    }
+  } @else if $breakpoint == 'xs-viewport' {
+    @media only screen and (max-width: 767px) {
+      @content;
+    }
+  }
+}
+
 // Fonts
 
 @mixin Font_Heading {
