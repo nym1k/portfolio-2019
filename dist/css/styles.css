@@ -1,5 +1,6 @@
 :root {
   --gutter: 20px;
+  --grid-gap: 40px;
 }
 
 @media only screen and (min-width: 451px) {
@@ -231,32 +232,35 @@ input::placeholder, textarea::placeholder {
   fill: #e05038;
   width: 40px;
   position: absolute;
-  bottom: 80px;
+  bottom: var(--gutter);
   right: 0;
   transition: transform .3s ease;
   cursor: pointer;
 }
 
-.her-Hero_Button::after {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 5px;
-  background-color: #e05038;
-  top: 25px;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 1px;
-  transition: top .3s ease;
-}
-
-.her-Hero_Button:hover {
-  transform: translateY(5px);
-}
-
-.her-Hero_Button:hover::after {
-  top: -20px;
+@media only screen and (min-width: 768px) {
+  .her-Hero_Button {
+    bottom: calc(var(--grid-gap) * 2);
+  }
+  .her-Hero_Button::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 5px;
+    background-color: #e05038;
+    top: 25px;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 1px;
+    transition: top .3s ease;
+  }
+  .her-Hero_Button:hover {
+    transform: translateY(5px);
+  }
+  .her-Hero_Button:hover::after {
+    top: -20px;
+  }
 }
 
 .her-Hero_Title {
@@ -282,7 +286,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .prt-Portfolio_Item {
-  margin-bottom: var(--gutter);
+  margin-bottom: var(--grid-gap);
 }
 
 .prt-Portfolio_Item:last-child {
@@ -292,7 +296,7 @@ input::placeholder, textarea::placeholder {
 @media only screen and (min-width: 900px) {
   .prt-Portfolio_Item {
     flex: 1;
-    margin-right: var(--gutter);
+    margin-right: var(--grid-gap);
   }
   .prt-Portfolio_Item:last-child {
     margin-right: 0;
@@ -306,7 +310,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .srv-Service_Item {
-  margin-bottom: var(--gutter);
+  margin-bottom: var(--grid-gap);
 }
 
 .srv-Service_Item:last-child {
@@ -316,7 +320,7 @@ input::placeholder, textarea::placeholder {
 @media only screen and (min-width: 768px) {
   .srv-Service_Item {
     flex: 1;
-    margin-right: var(--gutter);
+    margin-right: var(--grid-gap);
     margin-bottom: 0;
   }
   .srv-Service_Item:last-child {
@@ -370,7 +374,7 @@ input::placeholder, textarea::placeholder {
 .crd-Service_Icon {
   fill: none;
   max-width: 100px;
-  margin: 0 auto 30px;
+  margin: 0 auto 20px;
 }
 
 .crd-Service_Icon path {
@@ -440,8 +444,8 @@ input::placeholder, textarea::placeholder {
 
 @media only screen and (min-width: 900px) {
   .crd-Project_Card {
-    margin-bottom: calc(var(--gutter) * -1);
-    padding-bottom: var(--gutter);
+    margin-bottom: calc(var(--grid-gap) * -1);
+    padding-bottom: var(--grid-gap);
   }
 }
 
@@ -501,7 +505,7 @@ input::placeholder, textarea::placeholder {
     transition: transform .3s ease, color .3s ease;
   }
   .crd-Project_Card:hover .crd-Project_Text {
-    transform: translateY(var(--gutter));
+    transform: translateY(var(--grid-gap));
     color: #3b3a36;
   }
 }
@@ -618,8 +622,8 @@ input::placeholder, textarea::placeholder {
 }
 
 .sec-Section {
-  padding-top: calc(var(--gutter) * 2);
-  padding-bottom: calc(var(--gutter) * 2);
+  padding-top: var(--grid-gap);
+  padding-bottom: var(--grid-gap);
   color: #3b3a36;
 }
 
@@ -638,8 +642,8 @@ input::placeholder, textarea::placeholder {
 }
 
 .sec-Section_Header {
-  padding-bottom: var(--gutter);
   text-align: center;
+  padding-bottom: 40px;
 }
 
 @media only screen and (min-width: 900px) {
@@ -651,13 +655,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .sec-Section_Column {
-  margin-bottom: calc(var(--gutter) * 2);
-}
-
-@media only screen and (min-width: 451px) {
-  .sec-Section_Column {
-    margin-bottom: var(--gutter);
-  }
+  margin-bottom: var(--grid-gap);
 }
 
 .sec-Section_Column:last-child {
@@ -706,6 +704,10 @@ input::placeholder, textarea::placeholder {
   font-weight: 500;
   letter-spacing: 0.6px;
   margin-bottom: 20px;
+}
+
+.sec-Section_Title:only-child {
+  margin-bottom: 0;
 }
 
 .sec-Section_Text {

@@ -33,31 +33,35 @@
   fill: $color-accent;
   width: 40px;
   position: absolute;
-  bottom: 80px;
+  bottom: var(--gutter);
   right: 0;
   transition: transform .3s ease;
   cursor: pointer;
 
-  &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 5px;
-    background-color: $color-accent;
-    top: 25px;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 1px;
-    transition: top .3s ease;
-  }
-
-  &:hover {
-    transform: translateY(5px);
+  @include Breakpoint('sm') {
+    bottom: calc(var(--grid-gap) * 2);
     &::after {
-      top: -20px;
+      content: '';
+      display: block;
+      position: absolute;
+      width: 5px;
+      background-color: $color-accent;
+      top: 25px;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 1px;
+      transition: top .3s ease;
+    }
+
+    &:hover {
+      transform: translateY(5px);
+      &::after {
+        top: -20px;
+      }
     }
   }
+
 }
 
 .her-Hero_Title {

@@ -13,8 +13,8 @@
 }
 
 .sec-Section_Header {
-  padding-bottom: var(--gutter);
   text-align: center;
+  padding-bottom: 40px;
 }
 
 .sec-Section_Columns {
@@ -26,11 +26,7 @@
 }
 
 .sec-Section_Column {
-  margin-bottom: calc(var(--gutter) * 2);
-  
-  @include Breakpoint('xs') {
-    margin-bottom: var(--gutter);
-  }
+  margin-bottom: var(--grid-gap);
 
   &:last-child {
     margin-bottom: 0;
@@ -74,6 +70,10 @@
   @include Font_30-36;
   @include Font_Heading;
   margin-bottom: 20px;
+
+  &:only-child {
+    margin-bottom: 0;
+  }
 }
 
 .sec-Section_Text {
