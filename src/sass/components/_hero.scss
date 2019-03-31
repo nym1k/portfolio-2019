@@ -40,7 +40,6 @@
   cursor: pointer;
 
   @include Breakpoint('sm') {
-    bottom: calc(var(--grid-gap) * 2);
     &::after {
       content: '';
       display: block;

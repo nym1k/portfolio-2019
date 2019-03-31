@@ -2,7 +2,7 @@
   padding-top: var(--grid-gap);
   padding-bottom: var(--grid-gap);
 
-  @include Breakpoint('sm') {
+  @include Breakpoint('lg') {
     padding-top: calc(var(--grid-gap) * 2);
     padding-bottom: calc(var(--grid-gap) * 2);
   }

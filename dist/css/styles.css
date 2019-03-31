@@ -393,9 +393,6 @@ input::placeholder, textarea::placeholder {
 }
 
 @media only screen and (min-width: 768px) {
-  .her-Hero_Button {
-    bottom: calc(var(--grid-gap) * 2);
-  }
   .her-Hero_Button::after {
     content: '';
     display: block;
@@ -671,7 +668,7 @@ input::placeholder, textarea::placeholder {
   color: #3b3a36;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1200px) {
   .sec-Section {
     padding-top: calc(var(--grid-gap) * 2);
     padding-bottom: calc(var(--grid-gap) * 2);
@@ -697,7 +694,7 @@ input::placeholder, textarea::placeholder {
   padding-bottom: 40px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1200px) {
   .sec-Section_Header {
     padding-bottom: 80px;
   }

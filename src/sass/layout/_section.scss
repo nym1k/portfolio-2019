@@ -15,7 +15,7 @@
 .sec-Section_Header {
   text-align: center;
   padding-bottom: 40px;
-  @include Breakpoint('sm') {
+  @include Breakpoint('lg') {
     padding-bottom: 80px;
   }
 }
