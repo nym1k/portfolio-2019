@@ -67,4 +67,6 @@
 .crd-Service_Text {
   @include Font_16-28;
   letter-spacing: 1px;
+  max-width: 450px;
+  margin: 0 auto;
 }

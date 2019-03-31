@@ -1,12 +1,23 @@
 .srv-Service_Items {
-  display: flex;
+  @include Breakpoint('sm') {
+    display: flex;
+  }
 }
 
 .srv-Service_Item {
-  flex: 1;
-  margin-right: $grid-gap;
+  margin-bottom: $grid-gap;
 
   &:last-child {
-    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  @include Breakpoint('sm') {
+    flex: 1;
+    margin-right: $grid-gap;
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }

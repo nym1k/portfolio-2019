@@ -1,16 +1,18 @@
 .skl-Skills_Items {
-  width: 100%;
   display: inline-grid;
-  grid-template-columns: repeat(9, 1fr);
   grid-gap: $grid-gap;
-  // justify-items: center;
-  justify-items: center;
-  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+
+  @include Breakpoint('md') {
+    width: 100%;
+    grid-template-columns: repeat(9, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
 }
 
 .skl-Skills_Item {
   width: 100%;
-  // grid-column: span 2;
 }
 
 .skl-Skills_Item:nth-child(3n) {
@@ -26,9 +28,10 @@
   letter-spacing: 1px;
   font-family: $font-heading;
 
-  .skl-Skills_Item-accent & {
-    background-color: $color-accent;
-    color: $color-light;
-    font-weight: 500;
-  }
+}
+
+.skl-Skills_Skill-accent {
+  background-color: $color-accent;
+  color: $color-light;
+  font-weight: 500;
 }

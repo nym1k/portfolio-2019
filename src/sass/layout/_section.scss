@@ -18,21 +18,36 @@
 }
 
 .sec-Section_Columns {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+  @include Breakpoint('md') {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 
 .sec-Section_Column {
-  flex: 0 0 calc(50% - 20px);
+  margin-bottom: $grid-gap;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include Breakpoint('md') {
+    flex: 0 0 calc(50% - 20px);
+    margin-bottom: 0;
+  }
 }
 
 .sec-Section_Column-small {
-  flex: 0 0 calc(33% - 20px);
+  @include Breakpoint('lg') {
+    flex: 0 0 calc(33% - 20px);
+  }
 }
 
 .sec-Section_Column-large {
-  flex: 0 0 calc(66% - 20px);
+  @include Breakpoint('lg') {
+    flex: 0 0 calc(66% - 20px);
+  }
 }
 
 .sec-Section_Image {
