@@ -1,6 +1,6 @@
 .hd-Header {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   background-color: transparent;
   position: fixed;
   top: 0;
@@ -12,11 +12,6 @@
 
   .utl-HeaderScrolled & {
     background-color: rgba($color-dark, 0.6);
-  }
-
-  @include Breakpoint('md') {
-    padding-top: 15px;
-    padding-bottom: 15px;
   }
 }
 

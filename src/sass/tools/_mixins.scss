@@ -21,7 +21,7 @@
 
 @mixin Button {
   @include Font_16-28;
-  font-family: $font-body;
+  @include Font_Heading;
   letter-spacing: 1px;
   font-weight: 400;
   display: inline-block;

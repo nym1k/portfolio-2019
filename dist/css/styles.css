@@ -166,7 +166,9 @@ input::placeholder, textarea::placeholder {
 .frm-Form_Submit {
   font-size: 16px;
   line-height: 28px;
-  font-family: "Calluna-Regular";
+  font-family: "CallunaSans-Regular";
+  font-weight: 500;
+  letter-spacing: 0.6px;
   letter-spacing: 1px;
   font-weight: 400;
   display: inline-block;
@@ -725,7 +727,6 @@ input::placeholder, textarea::placeholder {
 .drw-Drawer {
   padding-top: var(--grid-gap);
   padding-bottom: var(--grid-gap);
-  height: 100vh;
   width: 450px;
   max-width: 80%;
   position: fixed;
@@ -885,8 +886,8 @@ input::placeholder, textarea::placeholder {
 }
 
 .hd-Header {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   background-color: transparent;
   position: fixed;
   top: 0;
@@ -900,13 +901,6 @@ input::placeholder, textarea::placeholder {
 
 .utl-HeaderScrolled .hd-Header {
   background-color: rgba(59, 58, 54, 0.6);
-}
-
-@media only screen and (min-width: 900px) {
-  .hd-Header {
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
 }
 
 .hd-Header_Inner {
