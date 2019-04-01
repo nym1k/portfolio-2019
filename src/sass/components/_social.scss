@@ -3,7 +3,7 @@
   margin-bottom: var(--gutter);
   justify-content: center;
 
-  @include Breakpoint('sm') {
+  @include Breakpoint('custom-600') {
     justify-content: flex-end;
     margin-bottom: 0;
   }
@@ -24,7 +24,7 @@
   fill: $color-link;
   transition: fill .3s ease;
 
-  @include Breakpoint('sm') {
+  @include Breakpoint('custom-600') {
     fill: $color-dark;
   }
 

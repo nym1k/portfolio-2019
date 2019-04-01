@@ -124,7 +124,16 @@ input::placeholder, textarea::placeholder {
 
 .frm-Form_Input {
   height: 40px;
-  width: calc(50% - 10px);
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .frm-Form_Input {
+    width: calc(50% - 10px);
+  }
+  .frm-Form_Input:first-child {
+    margin-right: 20px;
+  }
 }
 
 .frm-Form_Input::-webkit-input-placeholder {
@@ -143,10 +152,6 @@ input::placeholder, textarea::placeholder {
   line-height: 20px;
 }
 
-.frm-Form_Input:first-child {
-  margin-right: 20px;
-}
-
 .frm-Form_Textarea {
   font-family: "Calluna-Regular";
 }
@@ -163,6 +168,9 @@ input::placeholder, textarea::placeholder {
   border-radius: 3px;
   background-color: #e05038;
   color: #f6f6f6;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   display: inline-block;
   width: 100%;
 }
@@ -671,7 +679,7 @@ input::placeholder, textarea::placeholder {
           justify-content: center;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
   .soc-Social_Items {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
@@ -697,7 +705,7 @@ input::placeholder, textarea::placeholder {
   transition: fill .3s ease;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
   .soc-Social_Icon {
     fill: #3b3a36;
   }
@@ -1012,7 +1020,7 @@ input::placeholder, textarea::placeholder {
   color: #3b3a36;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
   .ft-Footer_Body {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1027,7 +1035,7 @@ input::placeholder, textarea::placeholder {
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
   .ft-Footer_Block {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 calc((100 / 3) * 1%);

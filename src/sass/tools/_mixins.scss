@@ -30,6 +30,7 @@
   border-radius: 3px;
   background-color: $color-accent;
   color: $color-light;
+  appearance: none;
 }
 
 // Animation
@@ -64,6 +65,10 @@
 @mixin Breakpoint($breakpoint) {
   @if $breakpoint == 'xs' {
     @media only screen and (min-width: 451px) {
+      @content;
+    }
+  } @else if $breakpoint == 'custom-600' {
+    @media only screen and (min-width: 600px) {
       @content;
     }
   } @else if $breakpoint == 'sm' {

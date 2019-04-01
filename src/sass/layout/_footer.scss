@@ -11,7 +11,7 @@
   text-align: center;
   background-color: $color-light;
   color: $color-dark;
-  @include Breakpoint('sm') {
+  @include Breakpoint('custom-600') {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -19,7 +19,7 @@
 }
 
 .ft-Footer_Block {
-  @include Breakpoint('sm') {
+  @include Breakpoint('custom-600') {
     flex: 0 0 calc((100 / 3) * 1%);
   }
 }
