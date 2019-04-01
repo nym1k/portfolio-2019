@@ -72,6 +72,7 @@
 }
 
 .hd-Header_Item {
+  display: flex;
   margin-right: 20px;
 
   &:last-child {
@@ -95,4 +96,10 @@
   color: #fff;
   cursor: pointer;
   outline: none;
+  width: 24px;
+  height: 24px;
+
+  svg {
+    fill: currentColor;
+  }
 }
