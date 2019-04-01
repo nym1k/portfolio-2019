@@ -33,6 +33,19 @@
   display: flex;
 }
 
+.hd-Header_Nav-desktop {
+  display: none;
+  @include Breakpoint('lg') {
+    display: block;
+  }
+}
+
+.hd-Header_Nav-mobile {
+  @include Breakpoint('lg') {
+    display: none;
+  }
+}
+
 .hd-Header_Items {
   display: flex;
   justify-content: center;

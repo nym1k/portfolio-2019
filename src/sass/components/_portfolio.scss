@@ -1,14 +1,36 @@
 .prt-Portfolio_Items {
+  &::after {
+    content: 'flickity';
+    display: none;
+  }
+
   @include Breakpoint('md') {
     display: flex;
+
+    &::after {
+      content: '';
+    }
+  }
+
+  .flickity-page-dots {
+    bottom: 10px;
+    z-index: 5;
   }
 }
 
 .prt-Portfolio_Item {
   margin-bottom: var(--grid-gap);
+  margin-right: var(--gutter);
+  width: 100%;
 
   &:last-child {
     margin-bottom: 0;
+    margin-right: 0;
+  }
+
+  @include Breakpoint('sm') {
+    margin-right: 40px;
+    width: calc(50% - 20px);
   }
 
   @include Breakpoint('md') {

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ross King | Front End Web Developer</title>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
@@ -76,7 +77,7 @@
             <h1 class="hd-Header_Title">Ross King</h1>
           </div>
           <div class="hd-Header_Block">
-            <nav class="hd-Header_Nav">
+            <nav class="hd-Header_Nav hd-Header_Nav-desktop">
               <ul class="hd-Header_Items">
                 <li class="hd-Header_Item">
                   <a href="#sevices" class="hd-Header_Link">Services</a>
@@ -93,12 +94,16 @@
                 <li class="hd-Header_Item">
                   <a href="#contact" class="hd-Header_Link">Contact</a>
                 </li>
+              </ul>
+            </nav>
+            <nav class="hd-Header_Nav hd-Header_Nav-mobile">
+              <ul class="hd-Header_Items">
                 <li class="hd-Header_Item">
                   <button class="hd-Header_Link" data-drawer-trigger>Menu</button>
                 </li>
               </ul>
-            </nav>
-          </div>
+            </li>
+          </nav>
         </div>
       </div>
     </header>
@@ -446,6 +451,7 @@
       </div>
     </footer>
     <!-- Footer End -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="js/app.bundle.js">
 
     </script>

@@ -1,0 +1,23 @@
+// Flickity
+
+.flickity-button {
+  background: none;
+
+  svg {
+    fill: $color-link;
+  }
+  
+  &.previous {
+    left: 0;
+  }
+
+  &.next {
+    right: 0;
+  }
+
+  &:hover {
+    background: none;
+    opacity: 1;
+
+  }
+}

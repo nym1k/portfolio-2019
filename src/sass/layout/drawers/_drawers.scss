@@ -12,4 +12,10 @@
   background-color: rgba($color-light, 0.4);
   opacity: 0;
   visibility: hidden;
+  transition: opacity .3s ease, visibility .3s ease;
+
+  .utl-DrawerActive & {
+    opacity: 1;
+    visibility: visible;
+  }
 }

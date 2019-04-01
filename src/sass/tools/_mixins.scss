@@ -111,9 +111,14 @@
   line-height: 28px;
 }
 
-@mixin Font_24-30 {
-  font-size: 24px;
-  line-height: 30px;
+@mixin Font_22-28 {
+  font-size: 22px;
+  line-height: 28px;
+}
+
+@mixin Font_26-32 {
+  font-size: 26px;
+  line-height: 32px;
 }
 
 @mixin Font_30-36 {
