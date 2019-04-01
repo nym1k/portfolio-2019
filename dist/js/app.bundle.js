@@ -1,6 +1,10 @@
 'use strict';
 
 (function () {
+  // Check if iOS
+  if (!!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)) {
+    document.body.classList.add('utl-iOS');
+  }
   // Debounce function - taken from https://gist.github.com/nmsdvid/8807205
   var debounceEvent = function debounceEvent(callback) {
     var time = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 80;
