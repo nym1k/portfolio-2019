@@ -1,5 +1,8 @@
 (function() {
-  // var Flickity = require('flickity');
+  // Debounce function - taken from https://gist.github.com/nmsdvid/8807205
+  const debounceEvent = (callback, time = 80, interval) =>
+    (...args) =>
+      clearTimeout(interval, interval = setTimeout(callback, time, ...args));
 
   Init()
 
@@ -9,6 +12,7 @@
       HeroScrollDown()
       ProjectsCarousel()
       ScrollToLink()
+      window.addEventListener('scroll', headerScroll)
     })
   }
 
@@ -50,6 +54,20 @@
       })
     })
   }
+
+  const headerScroll = debounceEvent(function() {
+    const headerHeight = document.querySelector('.hd-Header').offsetHeight
+
+    if (document.body.scrollTop > headerHeight || document.documentElement.scrollTop > headerHeight) {
+      if (!document.body.classList.contains('utl-HeaderScrolled')) {
+        document.body.classList.add('utl-HeaderScrolled')
+      }
+    } else {
+      if (document.body.classList.contains('utl-HeaderScrolled')) {
+        document.body.classList.remove('utl-HeaderScrolled')
+      }
+    }
+  })
 
   function HeroScrollDown() {
     const els = {

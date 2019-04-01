@@ -1,7 +1,18 @@
 'use strict';
 
 (function () {
-  // var Flickity = require('flickity');
+  // Debounce function - taken from https://gist.github.com/nmsdvid/8807205
+  var debounceEvent = function debounceEvent(callback) {
+    var time = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 80;
+    var interval = arguments[2];
+    return function () {
+      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      return clearTimeout(interval, interval = setTimeout.apply(undefined, [callback, time].concat(args)));
+    };
+  };
 
   Init();
 
@@ -11,6 +22,7 @@
       HeroScrollDown();
       ProjectsCarousel();
       ScrollToLink();
+      window.addEventListener('scroll', headerScroll);
     });
   }
 
@@ -51,6 +63,20 @@
       });
     });
   }
+
+  var headerScroll = debounceEvent(function () {
+    var headerHeight = document.querySelector('.hd-Header').offsetHeight;
+
+    if (document.body.scrollTop > headerHeight || document.documentElement.scrollTop > headerHeight) {
+      if (!document.body.classList.contains('utl-HeaderScrolled')) {
+        document.body.classList.add('utl-HeaderScrolled');
+      }
+    } else {
+      if (document.body.classList.contains('utl-HeaderScrolled')) {
+        document.body.classList.remove('utl-HeaderScrolled');
+      }
+    }
+  });
 
   function HeroScrollDown() {
     var els = {

@@ -737,6 +737,11 @@ input::placeholder, textarea::placeholder {
   right: 0;
   z-index: 10;
   color: #fff;
+  transition: background-color .3s ease;
+}
+
+.utl-HeaderScrolled .hd-Header {
+  background-color: rgba(59, 58, 54, 0.6);
 }
 
 @media only screen and (min-width: 900px) {
@@ -744,10 +749,6 @@ input::placeholder, textarea::placeholder {
     padding-top: 15px;
     padding-bottom: 15px;
   }
-}
-
-.hd-Header-scrolled {
-  background-color: rgba(59, 58, 54, 0.6);
 }
 
 .hd-Header_Inner {

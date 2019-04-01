@@ -8,14 +8,16 @@
   right: 0;
   z-index: 10;
   color: #fff;
+  transition: background-color .3s ease;
+
+  .utl-HeaderScrolled & {
+    background-color: rgba($color-dark, 0.6);
+  }
+
   @include Breakpoint('md') {
     padding-top: 15px;
     padding-bottom: 15px;
   }
-}
-
-.hd-Header-scrolled {
-  background-color: rgba($color-dark, 0.6);
 }
 
 .hd-Header_Inner {
