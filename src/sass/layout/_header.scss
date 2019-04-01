@@ -1,6 +1,6 @@
 .hd-Header {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   background-color: transparent;
   position: fixed;
   top: 0;
@@ -8,6 +8,14 @@
   right: 0;
   z-index: 10;
   color: #fff;
+  @include Breakpoint('md') {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.hd-Header-scrolled {
+  background-color: rgba($color-dark, 0.6);
 }
 
 .hd-Header_Inner {
@@ -25,7 +33,11 @@
 }
 
 .hd-Header_Title {
+  @include Font_22-28;
   @include Font_Heading;
+  @include Breakpoint('md') {
+    @include Font_26-32;
+  }
 }
 
 .hd-Header_Nav {
@@ -71,4 +83,14 @@
   text-decoration: none;
   letter-spacing: 1px;
   color: #fff;
+}
+
+.hd-Header_NavTrigger {
+  @include Font_16-28;
+  font-family: $font-heading;
+  text-decoration: none;
+  letter-spacing: 1px;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
 }

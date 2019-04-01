@@ -34,10 +34,11 @@
   width: 40px;
   height: 23.33px;
   position: absolute;
-  bottom: var(--gutter);
+  bottom: calc(var(--grid-gap) * 2);
   right: 0;
   transition: transform .3s ease;
   cursor: pointer;
+  outline: none;
 
   @include Breakpoint('sm') {
     &::after {
