@@ -12,7 +12,8 @@
 
   function Init() {
     document.addEventListener('DOMContentLoaded', () => {
-      HeroFullHeight()
+      heroFullHeight()
+      window.addEventListener('resize', heroFullHeight)
       Drawers()
       HeroScrollDown()
       ProjectsCarousel()
@@ -21,15 +22,9 @@
     })
   }
 
-  function HeroFullHeight() {
-    const els = {
-      hero: document.querySelector('.her-Hero')
-    }
-
-    console.log(window.innerHeight);
-
-    els.hero.style.height = `${window.innerHeight}px`
-  }
+  const heroFullHeight = debounceEvent(function() {
+    document.querySelector('.her-Hero').style.height = `${window.innerHeight}px`
+  })
 
   function Drawers() {
     const els = {

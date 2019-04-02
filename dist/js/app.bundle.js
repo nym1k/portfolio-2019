@@ -22,7 +22,8 @@
 
   function Init() {
     document.addEventListener('DOMContentLoaded', function () {
-      HeroFullHeight();
+      heroFullHeight();
+      window.addEventListener('resize', heroFullHeight);
       Drawers();
       HeroScrollDown();
       ProjectsCarousel();
@@ -31,15 +32,9 @@
     });
   }
 
-  function HeroFullHeight() {
-    var els = {
-      hero: document.querySelector('.her-Hero')
-    };
-
-    console.log(window.innerHeight);
-
-    els.hero.style.height = window.innerHeight + 'px';
-  }
+  var heroFullHeight = debounceEvent(function () {
+    document.querySelector('.her-Hero').style.height = window.innerHeight + 'px';
+  });
 
   function Drawers() {
     var els = {
