@@ -7,12 +7,6 @@
   max-width: 100px;
   margin: 0 auto 20px;
 
-  svg {
-    // height: 100vh;
-    // width: 100vw;
-    // background-color: white;
-  }
-
   path {
     stroke: $color-light;
     stroke-width: 6;
@@ -21,6 +15,10 @@
   .v1 {
     stroke-dasharray: 5000;
     stroke-dashoffset: 5000;
+
+  }
+
+  &.crd-Service_Icon-inView .v1 {
     animation-name: draw;
     animation-duration: 5s;
     animation-fill-mode: forwards; // Stay on the last frame
@@ -31,6 +29,9 @@
   .v2 {
     stroke-dasharray: 5000;
     stroke-dashoffset: 5000;
+  }
+
+  &.crd-Service_Icon-inView .v2 {
     animation-name: draw;
     animation-duration: 5s;
     animation-fill-mode: forwards; // Stay on the last frame
@@ -42,6 +43,9 @@
   .v3 {
     stroke-dasharray: 5000;
     stroke-dashoffset: 5000;
+  }
+
+  &.crd-Service_Icon-inView .v3 {
     animation-name: draw;
     animation-duration: 2s;
     animation-fill-mode: forwards; // Stay on the last frame
@@ -62,6 +66,17 @@
   @include Font_Heading;
   margin-bottom: 20px;
   color: $color-accent;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-30px);
+
+  &.crd-Service_Title-inView {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transition-delay: 0.1s;
+  }
 }
 
 .crd-Service_Text {
@@ -69,4 +84,15 @@
   letter-spacing: 1px;
   max-width: 450px;
   margin: 0 auto;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-30px);
+
+  &.crd-Service_Text-inView {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transition-delay: 0.2s;
+  }
 }

@@ -31,7 +31,23 @@
       ScrollToLink();
       HeroScrollDown();
       window.addEventListener('scroll', headerScroll);
+      inViewSVGs();
       ProjectsCarousel();
+    });
+  }
+
+  function inViewSVGs() {
+    inView('.crd-Service_Icon').on('enter', function (el) {
+      el.classList.add('crd-Service_Icon-inView');
+    });
+    inView('.crd-Service_Title').on('enter', function (el) {
+      el.classList.add('crd-Service_Title-inView');
+    });
+    inView('.crd-Service_Text').on('enter', function (el) {
+      el.classList.add('crd-Service_Text-inView');
+    });
+    inView('.utl-FadeIn').on('enter', function (el) {
+      el.classList.add('utl-FadedIn');
     });
   }
 
