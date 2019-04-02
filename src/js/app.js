@@ -15,7 +15,7 @@
   function Init() {
     document.addEventListener('DOMContentLoaded', () => {
       heroFullHeight()
-      window.addEventListener('resize', heroFullHeight)
+      window.addEventListener('resize', heroFullHeightDebounce)
       Drawers()
       smoothScrollPolyfill()
       ScrollToLink()
@@ -25,7 +25,12 @@
     })
   }
 
-  const heroFullHeight = debounceEvent(function() {
+  function heroFullHeight() {
+    document.querySelector('.her-Hero').style.height = `${window.innerHeight}px`
+    objectFitVideos()
+  }
+
+  const heroFullHeightDebounce = debounceEvent(function() {
     document.querySelector('.her-Hero').style.height = `${window.innerHeight}px`
   })
 

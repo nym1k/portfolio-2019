@@ -25,7 +25,7 @@
   function Init() {
     document.addEventListener('DOMContentLoaded', function () {
       heroFullHeight();
-      window.addEventListener('resize', heroFullHeight);
+      window.addEventListener('resize', heroFullHeightDebounce);
       Drawers();
       smoothScrollPolyfill();
       ScrollToLink();
@@ -35,7 +35,12 @@
     });
   }
 
-  var heroFullHeight = debounceEvent(function () {
+  function heroFullHeight() {
+    document.querySelector('.her-Hero').style.height = window.innerHeight + 'px';
+    objectFitVideos();
+  }
+
+  var heroFullHeightDebounce = debounceEvent(function () {
     document.querySelector('.her-Hero').style.height = window.innerHeight + 'px';
   });
 
