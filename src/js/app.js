@@ -12,12 +12,23 @@
 
   function Init() {
     document.addEventListener('DOMContentLoaded', () => {
+      HeroFullHeight()
       Drawers()
       HeroScrollDown()
       ProjectsCarousel()
       ScrollToLink()
       window.addEventListener('scroll', headerScroll)
     })
+  }
+
+  function HeroFullHeight() {
+    const els = {
+      hero: document.querySelector('.her-Hero')
+    }
+
+    console.log(window.innerHeight);
+
+    els.hero.style.height = `${window.innerHeight}px`
   }
 
   function Drawers() {
@@ -76,15 +87,17 @@
   function HeroScrollDown() {
     const els = {
       header: document.querySelector('.hd-Header'),
-      heroButton: document.querySelector('[data-hero-button]')
+      heroButton: document.querySelector('[data-hero-button]'),
+      sections: [].slice.call(document.querySelectorAll('section'))
     }
+
+    const nextSection = document.getElementById(els.sections[1].id)
 
     els.heroButton.addEventListener('click', function(e) {
       e.preventDefault()
 
-      const windowHeight = window.innerHeight
       const headerHeight = els.header.offsetHeight
-      const heroScrollOffset = windowHeight - headerHeight
+      const heroScrollOffset = nextSection.offsetTop - headerHeight
 
       ScrollTo(heroScrollOffset)
     })

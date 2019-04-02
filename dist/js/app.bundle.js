@@ -22,12 +22,23 @@
 
   function Init() {
     document.addEventListener('DOMContentLoaded', function () {
+      HeroFullHeight();
       Drawers();
       HeroScrollDown();
       ProjectsCarousel();
       ScrollToLink();
       window.addEventListener('scroll', headerScroll);
     });
+  }
+
+  function HeroFullHeight() {
+    var els = {
+      hero: document.querySelector('.her-Hero')
+    };
+
+    console.log(window.innerHeight);
+
+    els.hero.style.height = window.innerHeight + 'px';
   }
 
   function Drawers() {
@@ -85,15 +96,17 @@
   function HeroScrollDown() {
     var els = {
       header: document.querySelector('.hd-Header'),
-      heroButton: document.querySelector('[data-hero-button]')
+      heroButton: document.querySelector('[data-hero-button]'),
+      sections: [].slice.call(document.querySelectorAll('section'))
     };
+
+    var nextSection = document.getElementById(els.sections[1].id);
 
     els.heroButton.addEventListener('click', function (e) {
       e.preventDefault();
 
-      var windowHeight = window.innerHeight;
       var headerHeight = els.header.offsetHeight;
-      var heroScrollOffset = windowHeight - headerHeight;
+      var heroScrollOffset = nextSection.offsetTop - headerHeight;
 
       ScrollTo(heroScrollOffset);
     });
