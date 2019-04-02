@@ -71,6 +71,12 @@
   }
 }
 
+// Animations
+
+@mixin Animation_Pulse {
+  animation: pulse 1.5s infinite;
+}
+
 // Breakpoints
 
 @mixin Breakpoint($breakpoint) {

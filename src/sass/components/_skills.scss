@@ -14,22 +14,122 @@
 }
 
 .skl-Skills_Skill {
+  position: relative;
   text-align: center;
-  background-color: $color-light;
   border-radius: 15px;
-  padding: 10px 25px;
+  padding: 5px 25px;
+  z-index: 3;
   color: $color-dark;
-  letter-spacing: 1px;
-  font-family: $font-heading;
-  white-space: nowrap;
+  transition: color .05s ease;
+  height: 40px;
+  overflow: hidden;
+
+  &.skl-Skills_Skill-accent {
+    color: $color-light;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    // border-radius: 15px;
+    width: 100%;
+    will-change: transform;
+  }
+
+  &::before {
+    background-color: $color-light;
+    z-index: 1;
+  }
+
+  &::after {
+    z-index: 2;
+    background-color: $color-accent;
+    transform: scale(0);
+    transition: border-radius .3s ease, transform .3s ease, border-color .2s, background-color .3s ease;
+    border-radius: 50px;
+  }
+
+  &:hover {
+    color: $color-light;
+
+    &::after {
+      transform: scale(1.1);
+    }
+  }
+
+  &.skl-Skills_Skill-accent {
+    &::before {
+      background-color: $color-accent;
+    }
+    &::after {
+      background-color: $color-light;
+    }
+
+    &:hover {
+      color: $color-dark;
+    }
+  }
 }
 
-.skl-Skills_Item:nth-child(3n) .skl-Skills_Skill {
-  padding: 10px 50px;
+.skl-Skills_Skill-large {
+  padding-right: 50px;
+  padding-left: 50px;
 }
 
-.skl-Skills_Skill-accent {
-  background-color: $color-accent;
+.skl-Skills_Skill-ghost {
   color: $color-light;
-  font-weight: 500;
+  overflow: hidden;
+  border: 1px solid $color-light;
+
+  &::before {
+    display: none;
+  }
+
+  &::after {
+    z-index: 1;
+    background-color: $color-accent;
+    transform: translateX(-100%);
+    border-radius: 0;
+    transition: transform .3s ease;
+  }
+
+  &:hover {
+    &::after {
+      transform: translateX(0);
+    }
+  }
+
+  &.skl-Skills_Skill-accent {
+    &:hover {
+      color: $color-dark;
+    }
+  }
 }
+
+.skl-Skills_SkillText {
+  @include Font_16-28;
+  font-family: $font-heading;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  cursor: default;
+  z-index: 4;
+  position: relative;
+  transition: color .3s ease;
+}
+
+// .skl-Skills_Skill-accent {
+//   background-color: $color-accent;
+//   color: $color-light;
+//   font-weight: 500;
+// }
+
+// .skl-Skills_Item:nth-child(3n) .skl-Skills_Skill {
+//   &:hover {
+//     @include Animation_Pulse;
+//   }
+// }
