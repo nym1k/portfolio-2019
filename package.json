@@ -27,5 +27,8 @@
     "clean-css-cli": "^4.2.1",
     "node-sass": "^4.11.0",
     "postcss-cli": "^6.1.2"
+  },
+  "dependencies": {
+    "smoothscroll-polyfill": "^0.4.4"
   }
 }

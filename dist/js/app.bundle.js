@@ -18,6 +18,8 @@
     };
   };
 
+  // kick off the polyfill!
+
   Init();
 
   function Init() {
@@ -25,10 +27,11 @@
       heroFullHeight();
       window.addEventListener('resize', heroFullHeight);
       Drawers();
-      HeroScrollDown();
-      ProjectsCarousel();
+      smoothScrollPolyfill();
       ScrollToLink();
+      HeroScrollDown();
       window.addEventListener('scroll', headerScroll);
+      ProjectsCarousel();
     });
   }
 

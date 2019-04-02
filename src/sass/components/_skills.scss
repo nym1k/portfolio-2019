@@ -20,9 +20,9 @@
   padding: 5px 25px;
   z-index: 3;
   color: $color-dark;
-  transition: color .05s ease;
   height: 40px;
   overflow: hidden;
+  transition: color .3s ease;
 
   &.skl-Skills_Skill-accent {
     color: $color-light;
@@ -118,5 +118,4 @@
   cursor: default;
   z-index: 4;
   position: relative;
-  transition: color .3s ease;
 }
