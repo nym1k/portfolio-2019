@@ -36,7 +36,6 @@
     top: 0;
     bottom: 0;
     left: 0;
-    // border-radius: 15px;
     width: 100%;
     will-change: transform;
   }
@@ -50,7 +49,7 @@
     z-index: 2;
     background-color: $color-accent;
     transform: scale(0);
-    transition: border-radius .3s ease, transform .3s ease, border-color .2s, background-color .3s ease;
+    transition: transform .3s ease, border-color .2s, background-color .3s ease;
     border-radius: 50px;
   }
 
@@ -121,15 +120,3 @@
   position: relative;
   transition: color .3s ease;
 }
-
-// .skl-Skills_Skill-accent {
-//   background-color: $color-accent;
-//   color: $color-light;
-//   font-weight: 500;
-// }
-
-// .skl-Skills_Item:nth-child(3n) .skl-Skills_Skill {
-//   &:hover {
-//     @include Animation_Pulse;
-//   }
-// }
