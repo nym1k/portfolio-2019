@@ -41,7 +41,7 @@
 }
 
 .frm-Form_Submit {
-  @include Button;
+  @include Button_Primary;
   display: inline-block;
   width: 100%;
 }

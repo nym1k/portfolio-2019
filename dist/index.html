@@ -406,11 +406,11 @@
                 </div>
               </div>
               <div class="sec-Section_Column">
-                <form action="#" class="frm-Form">
-                  <input type="text" class="frm-Form_Input" placeholder="Name" />
-                  <input type="email" class="frm-Form_Input" placeholder="Email" />
-                  <textarea name="" id="" cols="30" rows="6" class="frm-Form_Textarea" placeholder="Message"></textarea>
-                  <input type="submit" value="Submit" class="frm-Form_Submit" />
+                <form class="frm-Form" id="ajax-contact" action="https://formspree.io/rosscking@me.com" method="POST">
+                  <input type="text" name="name" id="name" class="frm-Form_Input" placeholder="Name" required="">
+                  <input type="email" name="email" id="email" class="frm-Form_Input" placeholder="Email" required="">
+                  <textarea name="message" id="message" rows="6" class="frm-Form_Textarea" placeholder="Message" required=""></textarea>
+                  <button type="submit" class="frm-Form_Submit">Send</button>
                 </form>
               </div>
             </div>
