@@ -109,6 +109,18 @@
       prevNextButtons: false,
       watchCSS: true
     })
+
+    flkty.on( 'dragStart.flickity', function( event, pointer ) {
+      document.ontouchmove = function (e) {
+        e.preventDefault();
+      }
+    });
+
+    flkty.on( 'dragEnd.flickity', function( event, pointer ) {
+      document.ontouchmove = function (e) {
+        return true;
+      }
+    });
   }
 
   function ScrollToLink() {
