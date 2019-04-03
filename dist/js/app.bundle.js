@@ -151,13 +151,13 @@
       watchCSS: true
     });
 
-    flkty.on('dragStart.flickity', function (event, pointer) {
+    flkty.on('dragStart', function (event, pointer) {
       document.ontouchmove = function (e) {
         e.preventDefault();
       };
     });
 
-    flkty.on('dragEnd.flickity', function (event, pointer) {
+    flkty.on('dragEnd', function (event, pointer) {
       document.ontouchmove = function (e) {
         return true;
       };
