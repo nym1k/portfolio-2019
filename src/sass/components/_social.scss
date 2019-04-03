@@ -1,7 +1,11 @@
 .soc-Social_Items {
   display: flex;
-  margin-bottom: var(--gutter);
+  margin-bottom: $grid-gap / 2;
   justify-content: center;
+  
+  @include Breakpoint('xs') {
+    margin-bottom: $grid-gap;
+  }
 
   @include Breakpoint('custom-600') {
     justify-content: flex-end;

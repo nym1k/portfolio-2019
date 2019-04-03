@@ -3,8 +3,8 @@
 @font-face {
     font-family: 'Calluna-Regular';
     font-display: auto;
-    src: url('https://nym1k.github.io/portfolio-2019/dist/fonts/Calluna-Regular-webfont.woff2') format('woff2'),
-         url('https://nym1k.github.io/portfolio-2019/dist/fonts/Calluna-Regular-webfont.woff') format('woff');
+    src: url('../fonts/Calluna-Regular-webfont.woff2') format('woff2'),
+         url('../fonts/Calluna-Regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -12,8 +12,8 @@
 @font-face {
     font-family: 'CallunaSans-Regular';
     font-display: auto;
-    src: url('https://nym1k.github.io/portfolio-2019/dist/fonts/CallunaSans-Regular-webfont.woff2') format('woff2'),
-         url('https://nym1k.github.io/portfolio-2019/dist/fonts/CallunaSans-Regular-webfont.woff') format('woff');
+    src: url('../fonts/CallunaSans-Regular-webfont.woff2') format('woff2'),
+         url('../fonts/CallunaSans-Regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -70,7 +70,6 @@ body, button, input, select, textarea {
 button, input, select, textarea {
   font-size: inherit;
   font-family: inherit;
-  // line-height: inherit;
   background-color: transparent;
 }
 
@@ -80,4 +79,9 @@ input, textarea {
     font-family: inherit;
     line-height: inherit;
   }
+}
+
+svg {
+  display: block;
+  max-width: 100%;
 }

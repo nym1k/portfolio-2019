@@ -2,8 +2,8 @@
   position: relative;
 
   @include Breakpoint('md') {
-    margin-bottom: calc(var(--grid-gap) * -1);
-    padding-bottom: var(--grid-gap);
+    margin-bottom: calc($grid-gap * -1);
+    padding-bottom: $grid-gap;
   }
 }
 
@@ -60,7 +60,7 @@
     transition: transform .3s ease, color .3s ease;
 
     .crd-Project_Card:hover & {
-      transform: translateY(var(--grid-gap));
+      transform: translateY($grid-gap);
       color: $color-dark;
     }
   }

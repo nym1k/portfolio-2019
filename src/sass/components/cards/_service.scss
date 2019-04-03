@@ -16,42 +16,86 @@
     stroke-dasharray: 5000;
     stroke-dashoffset: 5000;
 
+    .utl-IE & {
+      stroke-dasharray: 0;
+      stroke-dashoffset: 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-30px);
+    }
   }
 
   &.crd-Service_Icon-inView .v1 {
     animation-name: draw;
     animation-duration: 5s;
-    animation-fill-mode: forwards; // Stay on the last frame
-    animation-iteration-count: 1; // Run only once
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
     animation-timing-function: linear;
+
+    .utl-IE & {
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
   }
 
   .v2 {
     stroke-dasharray: 5000;
     stroke-dashoffset: 5000;
+
+    .utl-IE & {
+      stroke-dasharray: 0;
+      stroke-dashoffset: 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-30px);
+    }
   }
 
   &.crd-Service_Icon-inView .v2 {
     animation-name: draw;
     animation-duration: 5s;
-    animation-fill-mode: forwards; // Stay on the last frame
-    animation-iteration-count: 1; // Run only once
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
     animation-timing-function: linear;
     animation-delay: 0.5s;
+
+    .utl-IE & {
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
   }
 
   .v3 {
     stroke-dasharray: 5000;
     stroke-dashoffset: 5000;
+
+    .utl-IE & {
+      stroke-dasharray: 0;
+      stroke-dashoffset: 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-30px);
+    }
   }
 
   &.crd-Service_Icon-inView .v3 {
     animation-name: draw;
     animation-duration: 2s;
-    animation-fill-mode: forwards; // Stay on the last frame
-    animation-iteration-count: 1; // Run only once
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
     animation-timing-function: linear;
     animation-delay: 1s;
+
+    .utl-IE & {
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
   }
 
   @keyframes draw {

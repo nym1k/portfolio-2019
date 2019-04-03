@@ -5,6 +5,17 @@
   if (!!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)) {
     document.body.classList.add('utl-iOS');
   }
+
+  // Check if IE
+  if (/MSIE 9/i.test(navigator.userAgent) || /MSIE 10/i.test(navigator.userAgent) || /rv:11.0/i.test(navigator.userAgent)) {
+    document.body.classList.add('utl-IE');
+  }
+
+  // Check if Edge
+  if (/Edge\/\d./i.test(navigator.userAgent)) {
+    document.body.classList.add('utl-Edge');
+  }
+
   // Debounce function - taken from https://gist.github.com/nmsdvid/8807205
   var debounceEvent = function debounceEvent(callback) {
     var time = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 80;

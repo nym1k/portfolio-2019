@@ -19,10 +19,14 @@
 }
 
 .prt-Portfolio_Item {
-  margin-bottom: var(--grid-gap);
-  margin-right: var(--gutter);
   width: 100%;
+  margin-bottom: $grid-gap;
+  margin-right: calc($grid-gap / 2);
 
+  @include Breakpoint('xs') {
+    margin-right: $grid-gap;
+  }
+  
   &:last-child {
     margin-bottom: 0;
     margin-right: 0;
@@ -34,9 +38,9 @@
   }
 
   @include Breakpoint('md') {
-    flex: 1;
+    flex: 1 1 auto;
 
-    margin-right: var(--grid-gap);
+    margin-right: $grid-gap;
 
     &:last-child {
       margin-right: 0;

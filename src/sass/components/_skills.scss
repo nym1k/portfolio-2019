@@ -3,14 +3,24 @@
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  margin-right: calc(var(--gutter) * -1);
-  margin-bottom: calc(var(--gutter) * -1);
+  margin-right: ($grid-gap / 2) * -1;
+  margin-bottom: ($grid-gap / 2) * -1;
+
+  @include Breakpoint('xs') {
+    margin-right: $grid-gap * -1;
+    margin-bottom: $grid-gap * -1;
+  }
 }
 
 .skl-Skills_Item {
   flex: 0 1 auto;
-  margin-right: var(--gutter);
-  margin-bottom: var(--gutter);
+  margin-right: $grid-gap / 2;
+  margin-bottom: $grid-gap / 2;
+
+  @include Breakpoint('xs') {
+    margin-right: $grid-gap;
+    margin-bottom: $grid-gap;
+  }
 }
 
 .skl-Skills_Skill {

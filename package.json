@@ -6,7 +6,7 @@
   "scripts": {
     "preview": "browser-sync start --server --files '**/*'",
     "clean": "rimraf dist/css",
-    "compile": "node-sass --output-style=expanded --source-map=true src/sass/styles.scss dist/css/styles.css",
+    "compile": "node-sass --output-style=compressed --source-map=true src/sass/styles.scss dist/css/styles.css",
     "prefix": "postcss dist/css/styles.css --use=autoprefixer --map=false --output=dist/css/styles.css",
     "minify": "cleancss --level=1 --source-map --source-map-inline-sources --output dist/css/styles.min.css dist/css/styles.css",
     "babel": "babel --presets es2015 src/js/app.js -o dist/js/app.bundle.js",

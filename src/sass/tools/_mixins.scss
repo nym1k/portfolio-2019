@@ -9,12 +9,17 @@
 }
 
 @mixin Inner {
-  max-width: calc(var(--grid-container) + (var(--gutter) * 2));
+  max-width: $grid-container + ($grid-gap * 2);
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: var(--gutter);
-  padding-left: var(--gutter);
+  padding-right: $grid-gap / 2;
+  padding-left: $grid-gap / 2;
+
+  @include Breakpoint('xs') {
+    padding-right: $grid-gap;
+    padding-left: $grid-gap;
+  }
 }
 
 // Buttons
