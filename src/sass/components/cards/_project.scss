@@ -2,7 +2,7 @@
   position: relative;
 
   @include Breakpoint('md') {
-    margin-bottom: calc($grid-gap * -1);
+    margin-bottom: $grid-gap * -1;
     padding-bottom: $grid-gap;
   }
 }
