@@ -47,14 +47,16 @@
   background-color: $color-dark;
   color: $color-light;
   text-align: center;
+  width: 100%;
 
   @include Breakpoint('md') {
+    text-align: left;
     background: none;
-    padding: 0;
+    padding: 0 10px;
     padding-top: 0;
     position: absolute;
     bottom: 50px;
-    left: 10px;
+    left: 0;
     z-index: 3;
     color: $color-light;
     transition: transform .3s ease, color .3s ease;
