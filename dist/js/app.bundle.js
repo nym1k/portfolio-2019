@@ -29,8 +29,6 @@
     };
   };
 
-  // kick off the polyfill!
-
   Init();
 
   function Init() {
@@ -42,12 +40,12 @@
       ScrollToLink();
       HeroScrollDown();
       window.addEventListener('scroll', headerScroll);
-      inViewSVGs();
+      inViewAnimations();
       ProjectsCarousel();
     });
   }
 
-  function inViewSVGs() {
+  function inViewAnimations() {
     inView('.crd-Service_Icon').on('enter', function (el) {
       el.classList.add('crd-Service_Icon-inView');
     });
