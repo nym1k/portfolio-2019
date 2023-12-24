@@ -1,14 +1,55 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-93120703-1"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-93120703-1');
+      function getCookie(name) {
+        var b = document.cookie.match('(^|[^;]+)\\s*' + name + '\\s*=\\s*([^;]+)');
+        return b ? b.pop() : '';
+      }
+      function addAnalytics() {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-93120703-1');
+      }
+      function checkConsent(){
+        const cookieConsent = getCookie('cookieconsent_status');
+        if (cookieConsent === 'allow' || cookieConsent === ''){
+          window['ga-disable-UA-93120703-1'] = false;
+          addAnalytics();
+        }
+        if (cookieConsent === 'deny'){
+          document.cookie = '_gat_gtag_UA_93120703_1=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+          document.cookie = '_gid=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+          document.cookie = '_ga=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+          window['ga-disable-UA-93120703-1'] = true;
+        }
+        window.cookieconsent.initialise({
+          "palette": {
+            "popup": {
+              "background": "#2d2c29"
+            },
+            "button": {
+              "background": "e05038"
+            }
+          },
+          "type": "opt-out",
+          "content": {
+            "allow": "Approve",
+            "dismiss": "Approve",
+            "deny": "Reject"
+          },
+          onStatusChange: function (status, chosenBefore) {
+            checkConsent();
+          }
+        })
+      }
+      window.addEventListener("load", function () {
+        checkConsent();
+      });
     </script>
 
     <meta charset="UTF-8">
